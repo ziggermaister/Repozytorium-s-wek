@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trenażer słówek NL</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,system-ui,sans-serif;background:#0a0a0c;color:#edebe6;
+       padding:0.9rem 0.8rem 4rem;line-height:1.5;font-size:15px}
+  h1{text-align:center;font-size:1.25rem;margin:0.3rem 0 0.15rem}
+  .stats{text-align:center;color:#777;font-size:0.78rem;font-family:monospace;margin-bottom:0.5rem}
+  .stats b{color:#E8600A}
+  #warn{background:rgba(232,90,74,.12);border:1px solid #E85A4A;color:#E85A4A;
+        border-radius:6px;padding:0.5rem 0.7rem;font-size:0.72rem;margin-bottom:0.8rem;display:none}
+
+  input,select,textarea{background:#141416;border:1px solid #2a2a30;border-radius:6px;
+       padding:0.45rem 0.65rem;color:#edebe6;font-size:0.85rem;font-family:inherit;width:100%}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:#E8600A}
+  #search{margin-bottom:0.6rem}
+
+  .controls{display:flex;gap:0.35rem;flex-wrap:wrap;justify-content:center;margin-bottom:1rem}
+  .btn{font-family:monospace;font-size:0.66rem;padding:0.32rem 0.6rem;border:1px solid #2a2a30;
+       border-radius:5px;background:transparent;color:#888;cursor:pointer;
+       text-transform:uppercase;letter-spacing:0.04em}
+  .btn.on{background:rgba(232,96,10,0.2);border-color:#E8600A;color:#E8600A}
+
+  .cat{margin-bottom:1.3rem}
+  .cat-title{font-family:monospace;font-size:0.66rem;letter-spacing:0.12em;text-transform:uppercase;
+       margin-bottom:0.45rem;padding-bottom:0.28rem;border-bottom:1px solid #252528;
+       display:flex;justify-content:space-between;align-items:center}
+  .cat-count{font-size:0.62rem;color:#555}
+
+  .word{background:#141416;border:1px solid #252528;border-left:3px solid;border-radius:6px;
+       padding:0.5rem 0.7rem;margin-bottom:0.35rem;cursor:pointer;transition:opacity .18s;user-select:none}
+  .top{display:flex;justify-content:space-between;align-items:baseline;gap:0.5rem}
+  .nl{font-family:monospace;font-weight:600;font-size:0.9rem}
+  .pl{color:#999;font-size:0.8rem;text-align:right}
+  .ex{font-family:monospace;font-size:0.72rem;color:#666;margin-top:0.18rem}
+  .note{font-size:0.69rem;color:#F0C040;margin-top:0.12rem}
+  .forms{font-family:monospace;font-size:0.68rem;color:#7fa8d8;margin-top:0.3rem;
+       padding-top:0.28rem;border-top:1px dashed #252528;line-height:1.75}
+  .forms b{color:#4A8FE8;font-weight:600}
+  .tag{display:inline-block;font-family:monospace;font-size:0.58rem;padding:0.05rem 0.32rem;
+       border-radius:3px;margin-left:0.35rem;vertical-align:middle;letter-spacing:0.04em}
+  .tag.sep{background:rgba(90,191,138,.18);color:#5ABF8A}
+  .tag.ins{background:rgba(232,90,74,.18);color:#E85A4A}
+  .word.known{opacity:.22}
+  .word.known .nl{text-decoration:line-through}
+
+  .panel{background:#141416;border:1px solid #252528;border-radius:8px;padding:0.85rem;margin-bottom:1.2rem}
+  .row{display:flex;gap:0.35rem;margin-bottom:0.35rem}
+  .row>*{flex:1}
+  .go{width:100%;background:rgba(232,96,10,.2);border:1px solid #E8600A;color:#E8600A;
+       padding:0.45rem;border-radius:5px;cursor:pointer;font-family:monospace;
+       font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.3rem}
+  textarea{height:110px;font-family:monospace;font-size:0.7rem}
+  summary{font-family:monospace;font-size:0.66rem;color:#666;cursor:pointer;
+       text-transform:uppercase;letter-spacing:0.08em;padding:0.3rem 0}
+  details{margin-bottom:0.9rem}
+  .hint{font-size:0.68rem;color:#555;margin-top:0.3rem;line-height:1.45}
+  .toast{position:fixed;bottom:1rem;left:50%;transform:translateX(-50%);background:#1c1c22;
+       border:1px solid #E8600A;color:#E8600A;padding:0.45rem 0.9rem;border-radius:6px;
+       font-size:0.78rem;font-family:monospace;opacity:0;transition:opacity .3s;
+       pointer-events:none;z-index:99}
+  .toast.show{opacity:1}
+</style>
+</head>
+<body>
+
+<h1>🇳🇱 Trenażer słówek</h1>
+<div class="stats">Do nauki: <b id="left">–</b> / <span id="total">–</span></div>
+<div id="warn"></div>
+
+<input id="search" placeholder="🔍 szukaj po niderlandzku lub polsku…" oninput="render()">
+
+<div class="controls">
+  <button class="btn on" id="f-all"  onclick="setFilter('all')">Wszystkie</button>
+  <button class="btn"    id="f-todo" onclick="setFilter('todo')">Do nauki</button>
+  <button class="btn"    id="f-comp" onclick="setFilter('comp')">Złożone</button>
+  <button class="btn"    onclick="resetAll()">Reset</button>
+</div>
+
+<details>
+  <summary>▸ Dodaj pojedyncze słówko</summary>
+  <div class="panel">
+    <div class="row">
+      <input id="i-nl" placeholder="niderlandzki">
+      <input id="i-pl" placeholder="polski">
+    </div>
+    <input id="i-ex" placeholder="przykład" style="margin-bottom:0.35rem">
+    <div class="row">
+      <input id="i-note" placeholder="skojarzenie">
+      <select id="i-cat">
+        <option value="ww">czasownik</option>
+        <option value="bn">przymiotnik</option>
+        <option value="zn">rzeczownik</option>
+        <option value="bw">przysłówek</option>
+        <option value="uitdr">wyrażenie</option>
+      </select>
+    </div>
+    <button class="go" onclick="addOne()">Dodaj</button>
+  </div>
+</details>
+
+<details>
+  <summary>▸ Wklej paczkę słówek</summary>
+  <div class="panel">
+    <textarea id="batch" placeholder="kategoria | niderlandzki | polski | przykład | skojarzenie | formy"></textarea>
+    <button class="go" onclick="importBatch()">Wczytaj paczkę</button>
+    <div class="hint">Jedna linia = jedno słówko, pola oddzielone kreską |<br>
+    Kategorie: ww / bn / zn / bw / uitdr · duplikaty pomijane automatycznie</div>
+  </div>
+</details>
+
+<div id="lists"></div>
+
+<details open id="backup-box">
+  <summary>▸ Kopia zapasowa — WAŻNE</summary>
+  <div class="panel">
+    <div class="hint" style="margin-bottom:0.4rem;margin-top:0">
+      Jeśli u góry widzisz czerwone ostrzeżenie, przeglądarka nie zapisuje postępu.
+      Wtedy przed zamknięciem: Eksportuj → skopiuj tekst → zachowaj gdzieś (notatki, mail do siebie).
+      Przy następnym otwarciu wklej z powrotem i Importuj.
+    </div>
+    <textarea id="backup"></textarea>
+    <div class="row" style="margin-top:0.35rem">
+      <button class="btn" onclick="doExport()">Eksportuj</button>
+      <button class="btn" onclick="doImport()">Importuj</button>
+    </div>
+  </div>
+</details>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const CATS={ww:{name:'Czasowniki',color:'#5ABF8A'},bn:{name:'Przymiotniki',color:'#4A8FE8'},
+            zn:{name:'Rzeczowniki',color:'#F0C040'},bw:{name:'Przysłówki',color:'#A07AE8'},
+            uitdr:{name:'Wyrażenia',color:'#E85A4A'}};
+const KEY='nl-slowka-v2';
+
+// [kat, nl, pl, przykład, skojarzenie, formy]
+// formy: "typ ;; teraz ;; imperfectum ;; perfectum ;; z te"
+const SEED=[
+["ww","ophalen","odbierać / zabierać","Ik haal het pakket op.","haal … op","sep;;ik haal het op;;ik haalde het op;;ik heb het opgehaald;;om het op te halen"],
+["ww","inpakken","pakować","Ik pak mijn spullen in.","pak … in","sep;;ik pak het in;;ik pakte het in;;ik heb het ingepakt;;om het in te pakken"],
+["ww","opruimen","posprzątać","Ik ruim de kamer op.","ruim … op","sep;;ik ruim op;;ik ruimde op;;ik heb opgeruimd;;om op te ruimen"],
+["ww","uitleggen","wyjaśniać","Kun je dat uitleggen?","uit + leggen","sep;;ik leg het uit;;ik legde het uit;;ik heb het uitgelegd;;om het uit te leggen"],
+["ww","afspreken","umówić się","Zullen we iets afspreken?","spreek … af","sep;;ik spreek af;;ik sprak af;;ik heb afgesproken;;om af te spreken"],
+["ww","opschieten","pospieszyć się","Schiet op!","rozkaz: Schiet op!","sep;;ik schiet op;;ik schoot op;;ik ben opgeschoten;;om op te schieten"],
+["ww","afhalen","odebrać (np. jedzenie)","Ik haal het eten af.","haal … af","sep;;ik haal af;;ik haalde af;;ik heb afgehaald;;om af te halen"],
+["ww","schoonmaken","czyścić / myć","Ik maak de keuken schoon.","schoon = czysty","sep;;ik maak schoon;;ik maakte schoon;;ik heb schoongemaakt;;om schoon te maken"],
+["ww","meevallen","okazać się lepszym niż myślałeś","Het valt mee.","brak polskiego odpowiednika","sep;;het valt mee;;het viel mee;;het is meegevallen;;—"],
+["ww","tegenvallen","rozczarować / być gorszym","Het weer valt tegen.","przeciwieństwo meevallen","sep;;het valt tegen;;het viel tegen;;het is tegengevallen;;—"],
+["ww","kapotgaan","psuć się","De machine gaat kapot.","proces, nie stan","sep;;het gaat kapot;;het ging kapot;;het is kapotgegaan;;om kapot te gaan"],
+["ww","opstapelen","piętrzyć / układać w stos","Niet te hoog opstapelen.","de stapel = stos","sep;;ik stapel op;;ik stapelde op;;ik heb opgestapeld;;om op te stapelen"],
+["ww","verplaatsen","przenosić / przesuwać","Kun je die doos verplaatsen?","ver- się NIE odrywa","ins;;ik verplaats het;;ik verplaatste het;;ik heb het verplaatst;;om het te verplaatsen"],
+["ww","vergrendelen","zaryglować / zablokować","De deur is vergrendeld.","grendel = rygiel","ins;;ik vergrendel;;ik vergrendelde;;ik heb vergrendeld;;om te vergrendelen"],
+["ww","ontgrendelen","odblokować","Ik ontgrendel de heftruck.","ont- = odwrotność","ins;;ik ontgrendel;;ik ontgrendelde;;ik heb ontgrendeld;;om te ontgrendelen"],
+["ww","bezorgen","dostarczyć","Ze bezorgen het morgen.","be- się NIE odrywa","ins;;ik bezorg;;ik bezorgde;;ik heb bezorgd;;om te bezorgen"],
+["ww","verwachten","oczekiwać / spodziewać się","Ik verwacht hem om 8 uur.","wachten = czekać","ins;;ik verwacht;;ik verwachtte;;ik heb verwacht;;om te verwachten"],
+["ww","beloven","obiecać","Dat beloof ik je.","be- bez ge- w perfectum","ins;;ik beloof;;ik beloofde;;ik heb beloofd;;om te beloven"],
+["ww","waarschuwen","ostrzegać","Ik heb je gewaarschuwd.","waar- to NIE prefiks → jest ge-","ins;;ik waarschuw;;ik waarschuwde;;ik heb gewaarschuwd;;om te waarschuwen"],
+["ww","melden","zgłaszać / meldować","Ik moet dit melden bij de baas.","jak polskie meldować",""],
+["ww","repareren","naprawiać","Ik heb de heftruck gerepareerd.","bez ge-! obce -eren","ins;;ik repareer;;ik repareerde;;ik heb gerepareerd;;om te repareren"],
+["ww","controleren","sprawdzać","Ik controleer de lijst.","jak kontrolować",""],
+["ww","regelen","załatwić / zorganizować","Ik regel het wel.","jak uregulować",""],
+["ww","klagen","narzekać","Hij klaagt altijd.","ang. complain",""],
+["ww","weigeren","odmówić","Hij weigerde te komen.","",""],
+["ww","missen","przegapić / tęsknić","Ik heb de trein gemist.","",""],
+["ww","lukken","udać się","Het lukt me niet.","bezosobowe: het lukt me",""],
+["ww","durven","odważyć się","Ik durf het niet.","",""],
+["ww","passen","pasować","Deze broek past niet.","też: uważać — pas op!",""],
+["ww","stapelen","układać w stos","Ik stapel de dozen.","",""],
+["ww","lossen","rozładowywać","We lossen de vrachtwagen.","para: laden / lossen",""],
+["ww","tillen","podnosić","Til met je benen!","słowo BHP-owe",""],
+["bn","zwaar","ciężki","Deze doos is zwaar.",""],
+["bn","voorzichtig","ostrożny","Wees voorzichtig!","voor + zicht = patrz przed"],
+["bn","gevaarlijk","niebezpieczny","Dat is gevaarlijk werk.","gevaar = niebezpieczeństwo"],
+["bn","stevig","mocny / solidny","Deze tas is stevig.","POZYTYWNE"],
+["bn","defect","wadliwy / uszkodzony","De machine is defect.","NEGATYWNE"],
+["bn","kapot","zepsuty (stan)","De heftruck is kapot.","niem. kaputt"],
+["bn","druk","zajęty / ruchliwy","Ik heb het druk vandaag.",""],
+["bn","gezellig","przytulny / miły","Het is hier gezellig.","kluczowe holenderskie słowo"],
+["bn","lastig","trudny / uciążliwy","Dat is een lastige vraag.","last = ciężar"],
+["bn","handig","praktyczny / przydatny","Dat is een handig ding.","hand → poręczny"],
+["bn","saai","nudny","De film was saai.",""],
+["bn","prachtig","wspaniały / przepiękny","Wat een prachtig uitzicht!","mocniejsze niż mooi"],
+["bn","duidelijk","jasny / zrozumiały","Is dat duidelijk?","bardzo częste w pracy"],
+["bn","makkelijk","łatwy","Dat is makkelijk.","też: gemakkelijk"],
+["bn","vervelend","nieprzyjemny / irytujący","Wat vervelend!","vervelen = nudzić"],
+["bn","boos","zły / wściekły","Hij is boos op mij.","boos OP iemand"],
+["bn","blij","zadowolony","Ik ben blij dat je er bent.",""],
+["bn","eerlijk","uczciwy / szczery","Eerlijk gezegd…","eer = honor"],
+["bn","goedkoop","tani","Dat is goedkoop.","goed + koop"],
+["bn","duur","drogi","Amsterdam is duur.",""],
+["bn","vies","brudny / obrzydliwy","De vloer is vies.",""],
+["bn","schoon","czysty","De keuken is schoon.","NIE przytulny"],
+["bn","streng","surowy / ostry","De baas is streng.",""],
+["bn","los","luźny / odczepiony","De schroef zit los.","przeciwieństwo: vast"],
+["bn","vast","zamocowany / stały","Het zit vast.","vaste baan = stała praca"],
+["bn","scheef","krzywy","Die stapel staat scheef.",""],
+["zn","de opdracht","zadanie / zlecenie","Ik heb een nieuwe opdracht.",""],
+["zn","het gereedschap","narzędzia","Waar is het gereedschap?","gereed = gotowy"],
+["zn","de collega","kolega z pracy","Mijn collega helpt me.","dwa l"],
+["zn","de dienst","zmiana (w pracy)","Ik heb een late dienst.",""],
+["zn","de heftruck","wózek widłowy","De heftruck is stuk.","ang. lift truck"],
+["zn","het pallet","paleta","Het pallet is vol.",""],
+["zn","de portemonnee","portfel","Ik ben mijn portemonnee vergeten.","z francuskiego"],
+["zn","de sleutel","klucz","Heb je de sleutel bij je?",""],
+["zn","het kaartje","bilet","Ik moet een kaartje kopen.","zdrobnienie → het"],
+["zn","de rekening","rachunek","Kan ik de rekening krijgen?","-ing → zawsze de"],
+["zn","de lijst","lista","Ik heb een lijst gemaakt.",""],
+["zn","de afspraak","umówione spotkanie","Ik heb een afspraak om 3 uur.","kluczowe w NL"],
+["zn","de huisbaas","właściciel mieszkania","Ik moet de huisbaas bellen.","huis + baas"],
+["zn","de huur","czynsz","De huur is te hoog.","huren = wynajmować"],
+["zn","de verzekering","ubezpieczenie","Heb je een verzekering?","-ing → de"],
+["zn","de belasting","podatek","Ik moet belasting betalen.","belasten = obciążać"],
+["zn","de gemeente","gmina / urząd miasta","Ik ga naar de gemeente.","sprawy urzędowe"],
+["zn","het formulier","formularz","Vul het formulier in.",""],
+["zn","het salaris","pensja","Het salaris is goed.","też: het loon"],
+["zn","de vergadering","zebranie / narada","De vergadering begint om 9.","-ing → de"],
+["zn","het magazijn","magazyn","Ik werk in het magazijn.","HET, nie de"],
+["zn","de vrachtwagen","ciężarówka","De vrachtwagen staat buiten.","vracht = ładunek"],
+["zn","de doos","pudełko / karton","Deze doos is zwaar.","mn. dozen"],
+["zn","de bestelling","zamówienie","De bestelling is klaar.","bestellen = zamawiać"],
+["zn","de klant","klient","De klant wacht.",""],
+["zn","de storing","awaria / usterka","Er is een storing.","storen = przeszkadzać"],
+["zn","de pauze","przerwa","Ik heb pauze om 12.",""],
+["zn","de ploeg","zmiana / ekipa","Ik zit in de late ploeg.","obok: de dienst"],
+["zn","de trap","schody","De trap is glad.","uwaga: też kopniak"],
+["bw","eindelijk","wreszcie","Eindelijk klaar!","einde = koniec"],
+["bw","bijna","prawie","Ik ben bijna klaar.",""],
+["bw","helaas","niestety","Helaas kan ik niet komen.",""],
+["bw","trouwens","swoją drogą","Trouwens, heb je het gehoord?",""],
+["bw","meteen","od razu","Ik ga meteen naar huis.",""],
+["bw","sowieso","i tak / tak czy siak","Ik ga sowieso.","słyszysz na ulicy"],
+["bw","net","właśnie / przed chwilą","Ik ben net thuis.",""],
+["bw","toch","mimo to / jednak","Het was koud maar toch ging ik.",""],
+["bw","eigenlijk","właściwie / tak naprawdę","Eigenlijk wil ik niet.","słyszysz co chwila"],
+["bw","gewoon","po prostu","Doe gewoon!","jedno z najczęstszych"],
+["bw","misschien","może","Misschien kom ik later.",""],
+["bw","meestal","zazwyczaj","Meestal werk ik vroeg.","meest = najwięcej"],
+["bw","vaak","często","Ik ga vaak fietsen.",""],
+["bw","soms","czasami","Soms is het druk.",""],
+["bw","nooit","nigdy","Ik heb dat nooit gedaan.",""],
+["bw","opeens","nagle","Opeens ging het licht uit.","też: ineens"],
+["bw","nogal","dość / dosyć","Het is nogal koud.",""],
+["bw","best","całkiem / dość","Dat is best goed.","NIE najlepszy"],
+["bw","amper","ledwo","Ik heb amper geslapen.",""],
+["bw","vooral","przede wszystkim","Vooral in de winter.","voor + al"],
+["bw","even","chwilkę / na moment","Wacht even!","zmiękcza prośbę"],
+["uitdr","rustig aan","spokojnie / bez pośpiechu","Doe het rustig aan.","nie uspokój się"],
+["uitdr","hoe dan ook","tak czy owak","Hoe dan ook moet ik gaan.",""],
+["uitdr","in ieder geval","w każdym razie","In ieder geval bedankt.",""],
+["uitdr","ik kom eraan","już idę","Kom je? — Ik kom eraan!","er + aan"],
+["uitdr","af en toe","od czasu do czasu","Af en toe ga ik fietsen.",""],
+["uitdr","verdorie","cholercia / kurczę","Verdorie, ik ben te laat!","łagodne przekleństwo"],
+["uitdr","boodschappen doen","robić zakupy","Ik ga boodschappen doen.","stały zwrot"],
+["uitdr","ik heb geen zin","nie mam ochoty","Ik heb geen zin om te koken.","de zin = ochota"],
+["uitdr","dat valt mee","nie jest tak źle","Was het zwaar? — Het viel mee.","od meevallen"],
+["uitdr","het maakt niet uit","nie ma znaczenia","Het maakt niet uit.",""],
+["uitdr","laat maar","nieważne / zostaw","Laat maar, ik doe het zelf.",""],
+["uitdr","doe maar","dawaj / niech będzie","Doe maar een koffie.","w kawiarni"],
+["uitdr","klopt","zgadza się","Om 8 uur? — Klopt.","kloppen = zgadzać się"],
+["uitdr","prima","świetnie / w porządku","Prima, tot morgen!",""],
+["uitdr","hoezo?","jak to? / dlaczego?","Hoezo, is er iets?","hoe + zo"],
+["uitdr","pas op!","uważaj!","Pas op, dat is zwaar!","passen = uważać"],
+["uitdr","het lukt me niet","nie udaje mi się","Het lukt me niet om te slapen.","od lukken"],
+["uitdr","ik ben het ermee eens","zgadzam się z tym","Ik ben het ermee eens.","er + mee"],
+["uitdr","dat schiet op","idzie do przodu","Zo, dat schiet op!","od opschieten"],
+["uitdr","zeker weten","na pewno","Zeker weten!","wzmocnione zeker"]
+];
+
+let data=[], filter='all', canSave=true;
+
+function seedObjects(){
+  return SEED.map(r=>({c:r[0],nl:r[1],pl:r[2],ex:r[3]||'',n:r[4]||'',f:r[5]||'',k:false}));
+}
+
+function testStorage(){
+  try{
+    localStorage.setItem('__t','1'); localStorage.removeItem('__t'); return true;
+  }catch(e){ return false; }
+}
+
+function load(){
+  canSave=testStorage();
+  if(!canSave){
+    const w=document.getElementById('warn');
+    w.style.display='block';
+    w.innerHTML='⚠️ Ta przeglądarka nie zapisuje postępu dla plików lokalnych. '+
+      'Postęp zniknie po zamknięciu. Używaj sekcji <b>Kopia zapasowa</b> na dole.';
+  }
+  let stored=null;
+  if(canSave){
+    try{ const raw=localStorage.getItem(KEY); if(raw) stored=JSON.parse(raw); }catch(e){}
+  }
+  if(Array.isArray(stored)&&stored.length){
+    data=stored;
+    const have=new Set(data.map(w=>w.nl.toLowerCase()));
+    let added=0;
+    seedObjects().forEach(s=>{
+      const ex=data.find(w=>w.nl.toLowerCase()===s.nl.toLowerCase());
+      if(!ex){ data.push(s); added++; }
+      else if(!ex.f && s.f){ ex.f=s.f; }   // dolej formy do starych wpisów
+    });
+    if(added) save();
+  }else{
+    data=seedObjects(); save();
+  }
+  render();
+}
+
+function save(){
+  if(!canSave) return;
+  try{ localStorage.setItem(KEY,JSON.stringify(data)); }
+  catch(e){ canSave=false; }
+}
+
+function formsHtml(f){
+  if(!f) return '';
+  const p=f.split(';;').map(x=>x.trim());
+  const typ=p[0]==='sep'
+    ? '<span class="tag sep">ROZDZIELNY</span>'
+    : '<span class="tag ins">NIEROZDZIELNY</span>';
+  const rows=[['teraz',p[1]],['przeszły',p[2]],['perfectum',p[3]],['z te',p[4]]]
+    .filter(r=>r[1]&&r[1]!=='—')
+    .map(r=>`<b>${r[0]}:</b> ${esc(r[1])}`).join('<br>');
+  return `<div class="forms">${typ}<br>${rows}</div>`;
+}
+
+function render(){
+  const box=document.getElementById('lists');
+  const q=document.getElementById('search').value.trim().toLowerCase();
+  box.innerHTML=''; let left=0;
+
+  Object.keys(CATS).forEach(c=>{
+    const words=data.filter(w=>w.c===c);
+    if(!words.length) return;
+    const todo=words.filter(w=>!w.k).length;
+    left+=todo;
+
+    let shown=words;
+    if(filter==='todo') shown=shown.filter(w=>!w.k);
+    if(filter==='comp') shown=shown.filter(w=>w.f);
+    if(q) shown=shown.filter(w=>w.nl.toLowerCase().includes(q)||w.pl.toLowerCase().includes(q));
+    if(!shown.length) return;
+
+    const div=document.createElement('div');
+    div.className='cat';
+    const h=document.createElement('div');
+    h.className='cat-title'; h.style.color=CATS[c].color;
+    h.innerHTML=`${CATS[c].name}<span class="cat-count">${todo} / ${words.length}</span>`;
+    div.appendChild(h);
+
+    shown.forEach(w=>{
+      const i=data.indexOf(w);
+      const el=document.createElement('div');
+      el.className='word'+(w.k?' known':'');
+      el.style.borderLeftColor=w.k?'#444':CATS[c].color;
+      el.onclick=()=>toggle(i);
+      el.innerHTML=`<div class="top">
+          <span class="nl" style="color:${CATS[c].color}">${esc(w.nl)}</span>
+          <span class="pl">${esc(w.pl)}</span></div>
+        ${w.ex?`<div class="ex">${esc(w.ex)}</div>`:''}
+        ${w.n?`<div class="note">💡 ${esc(w.n)}</div>`:''}
+        ${formsHtml(w.f)}`;
+      div.appendChild(el);
+    });
+    box.appendChild(div);
+  });
+
+  document.getElementById('left').textContent=left;
+  document.getElementById('total').textContent=data.length;
+}
+
+function esc(s){return String(s).replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));}
+
+function toggle(i){ data[i].k=!data[i].k; render(); save(); }
+
+function setFilter(f){
+  filter=f;
+  ['all','todo','comp'].forEach(x=>
+    document.getElementById('f-'+x).classList.toggle('on',f===x));
+  render();
+}
+
+function val(id){ return document.getElementById(id).value.trim(); }
+
+function addOne(){
+  const nl=val('i-nl'), pl=val('i-pl');
+  if(!nl||!pl){ toast('Wpisz słówko i tłumaczenie'); return; }
+  if(data.some(w=>w.nl.toLowerCase()===nl.toLowerCase())){ toast('Już jest na liście'); return; }
+  data.push({c:val('i-cat'),nl,pl,ex:val('i-ex'),n:val('i-note'),f:'',k:false});
+  ['i-nl','i-pl','i-ex','i-note'].forEach(id=>document.getElementById(id).value='');
+  render(); save(); toast('Dodano: '+nl);
+}
+
+function importBatch(){
+  const lines=document.getElementById('batch').value.split('\n').map(l=>l.trim()).filter(Boolean);
+  if(!lines.length){ toast('Pusto'); return; }
+  const have=new Set(data.map(w=>w.nl.toLowerCase()));
+  let added=0, skipped=0;
+  lines.forEach(l=>{
+    const p=l.split('|').map(x=>x.trim());
+    if(p.length<3){ skipped++; return; }
+    const [c,nl,pl,ex,n,f]=p;
+    if(!CATS[c]||!nl||!pl||have.has(nl.toLowerCase())){ skipped++; return; }
+    data.push({c,nl,pl,ex:ex||'',n:n||'',f:f||'',k:false});
+    have.add(nl.toLowerCase()); added++;
+  });
+  document.getElementById('batch').value='';
+  render(); save();
+  toast(`Dodano ${added}${skipped?`, pominięto ${skipped}`:''}`);
+}
+
+function resetAll(){
+  if(!confirm('Odznaczyć wszystkie słówka jako nienauczone?')) return;
+  data.forEach(w=>w.k=false); render(); save();
+}
+
+function doExport(){
+  document.getElementById('backup').value=JSON.stringify(data);
+  toast('Skopiuj i zachowaj');
+}
+
+function doImport(){
+  try{
+    const d=JSON.parse(document.getElementById('backup').value);
+    if(!Array.isArray(d)) throw new Error();
+    data=d; render(); save(); toast('Zaimportowano');
+  }catch(e){ toast('Błędne dane'); }
+}
+
+let tt;
+function toast(m){
+  const t=document.getElementById('toast');
+  t.textContent=m; t.classList.add('show');
+  clearTimeout(tt); tt=setTimeout(()=>t.classList.remove('show'),1800);
+}
+
+load();
+</script>
+</body>
+</html>
