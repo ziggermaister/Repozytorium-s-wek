@@ -81,6 +81,15 @@
   <button class="btn"    onclick="resetAll()">Reset</button>
 </div>
 
+<div class="controls" style="margin-top:-0.6rem;margin-bottom:1rem">
+  <button class="btn on" id="c-x"     onclick="setCat('x')">Wszystko</button>
+  <button class="btn"    id="c-ww"    onclick="setCat('ww')">Czasowniki</button>
+  <button class="btn"    id="c-bn"    onclick="setCat('bn')">Przymiotniki</button>
+  <button class="btn"    id="c-zn"    onclick="setCat('zn')">Rzeczowniki</button>
+  <button class="btn"    id="c-bw"    onclick="setCat('bw')">Przysłówki</button>
+  <button class="btn"    id="c-uitdr" onclick="setCat('uitdr')">Wyrażenia</button>
+</div>
+
 <details>
   <summary>▸ Dodaj pojedyncze słówko</summary>
   <div class="panel">
@@ -272,7 +281,7 @@ const SEED=[
 ["uitdr","zeker weten","na pewno","Zeker weten!","wzmocnione zeker"]
 ];
 
-let data=[], filter='all', canSave=true;
+let data=[], filter='all', catFilter='x', canSave=true;
 
 function seedObjects(){
   return SEED.map(r=>({c:r[0],nl:r[1],pl:r[2],ex:r[3]||'',n:r[4]||'',f:r[5]||'',k:false}));
@@ -340,6 +349,7 @@ function render(){
     if(!words.length) return;
     const todo=words.filter(w=>!w.k).length;
     left+=todo;
+    if(catFilter!=='x' && catFilter!==c) return;
 
     let shown=words;
     if(filter==='todo') shown=shown.filter(w=>!w.k);
@@ -383,6 +393,13 @@ function setFilter(f){
   filter=f;
   ['all','todo','comp'].forEach(x=>
     document.getElementById('f-'+x).classList.toggle('on',f===x));
+  render();
+}
+
+function setCat(c){
+  catFilter=c;
+  ['x','ww','bn','zn','bw','uitdr'].forEach(x=>
+    document.getElementById('c-'+x).classList.toggle('on',c===x));
   render();
 }
 
