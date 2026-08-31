@@ -45,6 +45,8 @@
        border-radius:3px;margin-left:0.35rem;vertical-align:middle;letter-spacing:0.04em}
   .tag.sep{background:rgba(90,191,138,.18);color:#5ABF8A}
   .tag.ins{background:rgba(232,90,74,.18);color:#E85A4A}
+  .tag.st{background:rgba(160,122,232,.18);color:#A07AE8}
+  .tag.zw{background:rgba(74,143,232,.18);color:#4A8FE8}
   .word.known{opacity:.22}
   .word.known .nl{text-decoration:line-through}
 
@@ -330,10 +332,15 @@ function save(){
 function formsHtml(f){
   if(!f) return '';
   const p=f.split(';;').map(x=>x.trim());
-  const typ=p[0]==='sep'
-    ? '<span class="tag sep">ROZDZIELNY</span>'
-    : '<span class="tag ins">NIEROZDZIELNY</span>';
-  const rows=[['teraz',p[1]],['przeszły',p[2]],['perfectum',p[3]],['z te',p[4]]]
+  const t=p[0];
+  const TAGS={sep:['sep','ROZDZIELNY'],ins:['ins','NIEROZDZIELNY'],
+              st:['st','NIEREGULARNY'],zw:['zw','REGULARNY']};
+  const tg=TAGS[t]||TAGS.st;
+  const typ=`<span class="tag ${tg[0]}">${tg[1]}</span>`;
+  const labels=(t==='sep'||t==='ins')
+    ? ['teraz','przeszły','perfectum','z te']
+    : ['teraz','przeszły ik','przeszły wij','perfectum'];
+  const rows=labels.map((L,i)=>[L,p[i+1]])
     .filter(r=>r[1]&&r[1]!=='—')
     .map(r=>`<b>${r[0]}:</b> ${esc(r[1])}`).join('<br>');
   return `<div class="forms">${typ}<br>${rows}</div>`;
