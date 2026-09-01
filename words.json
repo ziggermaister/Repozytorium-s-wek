@@ -1,0 +1,1647 @@
+{
+ "version": 1,
+ "updated": "2026-08-31",
+ "count": 205,
+ "words": [
+  {
+   "c": "ww",
+   "nl": "ophalen",
+   "pl": "odbierać / zabierać",
+   "ex": "Ik haal het pakket op.",
+   "n": "haal … op",
+   "f": "sep;;ik haal het op;;ik haalde het op;;ik heb het opgehaald;;om het op te halen"
+  },
+  {
+   "c": "ww",
+   "nl": "inpakken",
+   "pl": "pakować",
+   "ex": "Ik pak mijn spullen in.",
+   "n": "pak … in",
+   "f": "sep;;ik pak het in;;ik pakte het in;;ik heb het ingepakt;;om het in te pakken"
+  },
+  {
+   "c": "ww",
+   "nl": "opruimen",
+   "pl": "posprzątać",
+   "ex": "Ik ruim de kamer op.",
+   "n": "ruim … op",
+   "f": "sep;;ik ruim op;;ik ruimde op;;ik heb opgeruimd;;om op te ruimen"
+  },
+  {
+   "c": "ww",
+   "nl": "uitleggen",
+   "pl": "wyjaśniać",
+   "ex": "Kun je dat uitleggen?",
+   "n": "uit + leggen",
+   "f": "sep;;ik leg het uit;;ik legde het uit;;ik heb het uitgelegd;;om het uit te leggen"
+  },
+  {
+   "c": "ww",
+   "nl": "afspreken",
+   "pl": "umówić się",
+   "ex": "Zullen we iets afspreken?",
+   "n": "spreek … af",
+   "f": "sep;;ik spreek af;;ik sprak af;;ik heb afgesproken;;om af te spreken"
+  },
+  {
+   "c": "ww",
+   "nl": "opschieten",
+   "pl": "pospieszyć się",
+   "ex": "Schiet op!",
+   "n": "rozkaz: Schiet op!",
+   "f": "sep;;ik schiet op;;ik schoot op;;ik ben opgeschoten;;om op te schieten"
+  },
+  {
+   "c": "ww",
+   "nl": "afhalen",
+   "pl": "odebrać (np. jedzenie)",
+   "ex": "Ik haal het eten af.",
+   "n": "haal … af",
+   "f": "sep;;ik haal af;;ik haalde af;;ik heb afgehaald;;om af te halen"
+  },
+  {
+   "c": "ww",
+   "nl": "schoonmaken",
+   "pl": "czyścić / myć",
+   "ex": "Ik maak de keuken schoon.",
+   "n": "schoon = czysty",
+   "f": "sep;;ik maak schoon;;ik maakte schoon;;ik heb schoongemaakt;;om schoon te maken"
+  },
+  {
+   "c": "ww",
+   "nl": "meevallen",
+   "pl": "okazać się lepszym niż myślałeś",
+   "ex": "Het valt mee.",
+   "n": "brak polskiego odpowiednika",
+   "f": "sep;;het valt mee;;het viel mee;;het is meegevallen;;—"
+  },
+  {
+   "c": "ww",
+   "nl": "tegenvallen",
+   "pl": "rozczarować / być gorszym",
+   "ex": "Het weer valt tegen.",
+   "n": "przeciwieństwo meevallen",
+   "f": "sep;;het valt tegen;;het viel tegen;;het is tegengevallen;;—"
+  },
+  {
+   "c": "ww",
+   "nl": "kapotgaan",
+   "pl": "psuć się",
+   "ex": "De machine gaat kapot.",
+   "n": "proces, nie stan",
+   "f": "sep;;het gaat kapot;;het ging kapot;;het is kapotgegaan;;om kapot te gaan"
+  },
+  {
+   "c": "ww",
+   "nl": "opstapelen",
+   "pl": "piętrzyć / układać w stos",
+   "ex": "Niet te hoog opstapelen.",
+   "n": "de stapel = stos",
+   "f": "sep;;ik stapel op;;ik stapelde op;;ik heb opgestapeld;;om op te stapelen"
+  },
+  {
+   "c": "ww",
+   "nl": "verplaatsen",
+   "pl": "przenosić / przesuwać",
+   "ex": "Kun je die doos verplaatsen?",
+   "n": "ver- się NIE odrywa",
+   "f": "ins;;ik verplaats het;;ik verplaatste het;;ik heb het verplaatst;;om het te verplaatsen"
+  },
+  {
+   "c": "ww",
+   "nl": "vergrendelen",
+   "pl": "zaryglować / zablokować",
+   "ex": "De deur is vergrendeld.",
+   "n": "grendel = rygiel",
+   "f": "ins;;ik vergrendel;;ik vergrendelde;;ik heb vergrendeld;;om te vergrendelen"
+  },
+  {
+   "c": "ww",
+   "nl": "ontgrendelen",
+   "pl": "odblokować",
+   "ex": "Ik ontgrendel de heftruck.",
+   "n": "ont- = odwrotność",
+   "f": "ins;;ik ontgrendel;;ik ontgrendelde;;ik heb ontgrendeld;;om te ontgrendelen"
+  },
+  {
+   "c": "ww",
+   "nl": "bezorgen",
+   "pl": "dostarczyć",
+   "ex": "Ze bezorgen het morgen.",
+   "n": "be- się NIE odrywa",
+   "f": "ins;;ik bezorg;;ik bezorgde;;ik heb bezorgd;;om te bezorgen"
+  },
+  {
+   "c": "ww",
+   "nl": "verwachten",
+   "pl": "oczekiwać / spodziewać się",
+   "ex": "Ik verwacht hem om 8 uur.",
+   "n": "wachten = czekać",
+   "f": "ins;;ik verwacht;;ik verwachtte;;ik heb verwacht;;om te verwachten"
+  },
+  {
+   "c": "ww",
+   "nl": "beloven",
+   "pl": "obiecać",
+   "ex": "Dat beloof ik je.",
+   "n": "be- bez ge- w perfectum",
+   "f": "ins;;ik beloof;;ik beloofde;;ik heb beloofd;;om te beloven"
+  },
+  {
+   "c": "ww",
+   "nl": "waarschuwen",
+   "pl": "ostrzegać",
+   "ex": "Ik heb je gewaarschuwd.",
+   "n": "waar- to NIE prefiks → jest ge-",
+   "f": "ins;;ik waarschuw;;ik waarschuwde;;ik heb gewaarschuwd;;om te waarschuwen"
+  },
+  {
+   "c": "ww",
+   "nl": "melden",
+   "pl": "zgłaszać / meldować",
+   "ex": "Ik moet dit melden bij de baas.",
+   "n": "jak polskie meldować",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "repareren",
+   "pl": "naprawiać",
+   "ex": "Ik heb de heftruck gerepareerd.",
+   "n": "bez ge-! obce -eren",
+   "f": "ins;;ik repareer;;ik repareerde;;ik heb gerepareerd;;om te repareren"
+  },
+  {
+   "c": "ww",
+   "nl": "controleren",
+   "pl": "sprawdzać",
+   "ex": "Ik controleer de lijst.",
+   "n": "jak kontrolować",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "regelen",
+   "pl": "załatwić / zorganizować",
+   "ex": "Ik regel het wel.",
+   "n": "jak uregulować",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "klagen",
+   "pl": "narzekać",
+   "ex": "Hij klaagt altijd.",
+   "n": "ang. complain",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "weigeren",
+   "pl": "odmówić",
+   "ex": "Hij weigerde te komen.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "missen",
+   "pl": "przegapić / tęsknić",
+   "ex": "Ik heb de trein gemist.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "lukken",
+   "pl": "udać się",
+   "ex": "Het lukt me niet.",
+   "n": "bezosobowe: het lukt me",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "durven",
+   "pl": "odważyć się",
+   "ex": "Ik durf het niet.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "passen",
+   "pl": "pasować",
+   "ex": "Deze broek past niet.",
+   "n": "też: uważać — pas op!",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "stapelen",
+   "pl": "układać w stos",
+   "ex": "Ik stapel de dozen.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "lossen",
+   "pl": "rozładowywać",
+   "ex": "We lossen de vrachtwagen.",
+   "n": "para: laden / lossen",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "tillen",
+   "pl": "podnosić",
+   "ex": "Til met je benen!",
+   "n": "słowo BHP-owe",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "zwaar",
+   "pl": "ciężki",
+   "ex": "Deze doos is zwaar.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "voorzichtig",
+   "pl": "ostrożny",
+   "ex": "Wees voorzichtig!",
+   "n": "voor + zicht = patrz przed",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "gevaarlijk",
+   "pl": "niebezpieczny",
+   "ex": "Dat is gevaarlijk werk.",
+   "n": "gevaar = niebezpieczeństwo",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "stevig",
+   "pl": "mocny / solidny",
+   "ex": "Deze tas is stevig.",
+   "n": "POZYTYWNE",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "defect",
+   "pl": "wadliwy / uszkodzony",
+   "ex": "De machine is defect.",
+   "n": "NEGATYWNE",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "kapot",
+   "pl": "zepsuty (stan)",
+   "ex": "De heftruck is kapot.",
+   "n": "niem. kaputt",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "druk",
+   "pl": "zajęty / ruchliwy",
+   "ex": "Ik heb het druk vandaag.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "gezellig",
+   "pl": "przytulny / miły",
+   "ex": "Het is hier gezellig.",
+   "n": "kluczowe holenderskie słowo",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "lastig",
+   "pl": "trudny / uciążliwy",
+   "ex": "Dat is een lastige vraag.",
+   "n": "last = ciężar",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "handig",
+   "pl": "praktyczny / przydatny",
+   "ex": "Dat is een handig ding.",
+   "n": "hand → poręczny",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "saai",
+   "pl": "nudny",
+   "ex": "De film was saai.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "prachtig",
+   "pl": "wspaniały / przepiękny",
+   "ex": "Wat een prachtig uitzicht!",
+   "n": "mocniejsze niż mooi",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "duidelijk",
+   "pl": "jasny / zrozumiały",
+   "ex": "Is dat duidelijk?",
+   "n": "bardzo częste w pracy",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "makkelijk",
+   "pl": "łatwy",
+   "ex": "Dat is makkelijk.",
+   "n": "też: gemakkelijk",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "vervelend",
+   "pl": "nieprzyjemny / irytujący",
+   "ex": "Wat vervelend!",
+   "n": "vervelen = nudzić",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "boos",
+   "pl": "zły / wściekły",
+   "ex": "Hij is boos op mij.",
+   "n": "boos OP iemand",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "blij",
+   "pl": "zadowolony",
+   "ex": "Ik ben blij dat je er bent.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "eerlijk",
+   "pl": "uczciwy / szczery",
+   "ex": "Eerlijk gezegd…",
+   "n": "eer = honor",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "goedkoop",
+   "pl": "tani",
+   "ex": "Dat is goedkoop.",
+   "n": "goed + koop",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "duur",
+   "pl": "drogi",
+   "ex": "Amsterdam is duur.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "vies",
+   "pl": "brudny / obrzydliwy",
+   "ex": "De vloer is vies.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "schoon",
+   "pl": "czysty",
+   "ex": "De keuken is schoon.",
+   "n": "NIE przytulny",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "streng",
+   "pl": "surowy / ostry",
+   "ex": "De baas is streng.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "los",
+   "pl": "luźny / odczepiony",
+   "ex": "De schroef zit los.",
+   "n": "przeciwieństwo: vast",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "vast",
+   "pl": "zamocowany / stały",
+   "ex": "Het zit vast.",
+   "n": "vaste baan = stała praca",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "scheef",
+   "pl": "krzywy",
+   "ex": "Die stapel staat scheef.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de opdracht",
+   "pl": "zadanie / zlecenie",
+   "ex": "Ik heb een nieuwe opdracht.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "het gereedschap",
+   "pl": "narzędzia",
+   "ex": "Waar is het gereedschap?",
+   "n": "gereed = gotowy",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de collega",
+   "pl": "kolega z pracy",
+   "ex": "Mijn collega helpt me.",
+   "n": "dwa l",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de dienst",
+   "pl": "zmiana (w pracy)",
+   "ex": "Ik heb een late dienst.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de heftruck",
+   "pl": "wózek widłowy",
+   "ex": "De heftruck is stuk.",
+   "n": "ang. lift truck",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "het pallet",
+   "pl": "paleta",
+   "ex": "Het pallet is vol.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de portemonnee",
+   "pl": "portfel",
+   "ex": "Ik ben mijn portemonnee vergeten.",
+   "n": "z francuskiego",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de sleutel",
+   "pl": "klucz",
+   "ex": "Heb je de sleutel bij je?",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "het kaartje",
+   "pl": "bilet",
+   "ex": "Ik moet een kaartje kopen.",
+   "n": "zdrobnienie → het",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de rekening",
+   "pl": "rachunek",
+   "ex": "Kan ik de rekening krijgen?",
+   "n": "-ing → zawsze de",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de lijst",
+   "pl": "lista",
+   "ex": "Ik heb een lijst gemaakt.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de afspraak",
+   "pl": "umówione spotkanie",
+   "ex": "Ik heb een afspraak om 3 uur.",
+   "n": "kluczowe w NL",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de huisbaas",
+   "pl": "właściciel mieszkania",
+   "ex": "Ik moet de huisbaas bellen.",
+   "n": "huis + baas",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de huur",
+   "pl": "czynsz",
+   "ex": "De huur is te hoog.",
+   "n": "huren = wynajmować",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de verzekering",
+   "pl": "ubezpieczenie",
+   "ex": "Heb je een verzekering?",
+   "n": "-ing → de",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de belasting",
+   "pl": "podatek",
+   "ex": "Ik moet belasting betalen.",
+   "n": "belasten = obciążać",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de gemeente",
+   "pl": "gmina / urząd miasta",
+   "ex": "Ik ga naar de gemeente.",
+   "n": "sprawy urzędowe",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "het formulier",
+   "pl": "formularz",
+   "ex": "Vul het formulier in.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "het salaris",
+   "pl": "pensja",
+   "ex": "Het salaris is goed.",
+   "n": "też: het loon",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de vergadering",
+   "pl": "zebranie / narada",
+   "ex": "De vergadering begint om 9.",
+   "n": "-ing → de",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "het magazijn",
+   "pl": "magazyn",
+   "ex": "Ik werk in het magazijn.",
+   "n": "HET, nie de",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de vrachtwagen",
+   "pl": "ciężarówka",
+   "ex": "De vrachtwagen staat buiten.",
+   "n": "vracht = ładunek",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de doos",
+   "pl": "pudełko / karton",
+   "ex": "Deze doos is zwaar.",
+   "n": "mn. dozen",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de bestelling",
+   "pl": "zamówienie",
+   "ex": "De bestelling is klaar.",
+   "n": "bestellen = zamawiać",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de klant",
+   "pl": "klient",
+   "ex": "De klant wacht.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de storing",
+   "pl": "awaria / usterka",
+   "ex": "Er is een storing.",
+   "n": "storen = przeszkadzać",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de pauze",
+   "pl": "przerwa",
+   "ex": "Ik heb pauze om 12.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de ploeg",
+   "pl": "zmiana / ekipa",
+   "ex": "Ik zit in de late ploeg.",
+   "n": "obok: de dienst",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de trap",
+   "pl": "schody",
+   "ex": "De trap is glad.",
+   "n": "uwaga: też kopniak",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "eindelijk",
+   "pl": "wreszcie",
+   "ex": "Eindelijk klaar!",
+   "n": "einde = koniec",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "bijna",
+   "pl": "prawie",
+   "ex": "Ik ben bijna klaar.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "helaas",
+   "pl": "niestety",
+   "ex": "Helaas kan ik niet komen.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "trouwens",
+   "pl": "swoją drogą",
+   "ex": "Trouwens, heb je het gehoord?",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "meteen",
+   "pl": "od razu",
+   "ex": "Ik ga meteen naar huis.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "sowieso",
+   "pl": "i tak / tak czy siak",
+   "ex": "Ik ga sowieso.",
+   "n": "słyszysz na ulicy",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "net",
+   "pl": "właśnie / przed chwilą",
+   "ex": "Ik ben net thuis.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "toch",
+   "pl": "mimo to / jednak",
+   "ex": "Het was koud maar toch ging ik.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "eigenlijk",
+   "pl": "właściwie / tak naprawdę",
+   "ex": "Eigenlijk wil ik niet.",
+   "n": "słyszysz co chwila",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "gewoon",
+   "pl": "po prostu",
+   "ex": "Doe gewoon!",
+   "n": "jedno z najczęstszych",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "misschien",
+   "pl": "może",
+   "ex": "Misschien kom ik later.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "meestal",
+   "pl": "zazwyczaj",
+   "ex": "Meestal werk ik vroeg.",
+   "n": "meest = najwięcej",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "vaak",
+   "pl": "często",
+   "ex": "Ik ga vaak fietsen.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "soms",
+   "pl": "czasami",
+   "ex": "Soms is het druk.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "nooit",
+   "pl": "nigdy",
+   "ex": "Ik heb dat nooit gedaan.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "opeens",
+   "pl": "nagle",
+   "ex": "Opeens ging het licht uit.",
+   "n": "też: ineens",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "nogal",
+   "pl": "dość / dosyć",
+   "ex": "Het is nogal koud.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "best",
+   "pl": "całkiem / dość",
+   "ex": "Dat is best goed.",
+   "n": "NIE najlepszy",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "amper",
+   "pl": "ledwo",
+   "ex": "Ik heb amper geslapen.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "vooral",
+   "pl": "przede wszystkim",
+   "ex": "Vooral in de winter.",
+   "n": "voor + al",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "even",
+   "pl": "chwilkę / na moment",
+   "ex": "Wacht even!",
+   "n": "zmiękcza prośbę",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "rustig aan",
+   "pl": "spokojnie / bez pośpiechu",
+   "ex": "Doe het rustig aan.",
+   "n": "nie uspokój się",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "hoe dan ook",
+   "pl": "tak czy owak",
+   "ex": "Hoe dan ook moet ik gaan.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "in ieder geval",
+   "pl": "w każdym razie",
+   "ex": "In ieder geval bedankt.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "ik kom eraan",
+   "pl": "już idę",
+   "ex": "Kom je? — Ik kom eraan!",
+   "n": "er + aan",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "af en toe",
+   "pl": "od czasu do czasu",
+   "ex": "Af en toe ga ik fietsen.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "verdorie",
+   "pl": "cholercia / kurczę",
+   "ex": "Verdorie, ik ben te laat!",
+   "n": "łagodne przekleństwo",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "boodschappen doen",
+   "pl": "robić zakupy",
+   "ex": "Ik ga boodschappen doen.",
+   "n": "stały zwrot",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "ik heb geen zin",
+   "pl": "nie mam ochoty",
+   "ex": "Ik heb geen zin om te koken.",
+   "n": "de zin = ochota",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "dat valt mee",
+   "pl": "nie jest tak źle",
+   "ex": "Was het zwaar? — Het viel mee.",
+   "n": "od meevallen",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "het maakt niet uit",
+   "pl": "nie ma znaczenia",
+   "ex": "Het maakt niet uit.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "laat maar",
+   "pl": "nieważne / zostaw",
+   "ex": "Laat maar, ik doe het zelf.",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "doe maar",
+   "pl": "dawaj / niech będzie",
+   "ex": "Doe maar een koffie.",
+   "n": "w kawiarni",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "klopt",
+   "pl": "zgadza się",
+   "ex": "Om 8 uur? — Klopt.",
+   "n": "kloppen = zgadzać się",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "prima",
+   "pl": "świetnie / w porządku",
+   "ex": "Prima, tot morgen!",
+   "n": "",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "hoezo?",
+   "pl": "jak to? / dlaczego?",
+   "ex": "Hoezo, is er iets?",
+   "n": "hoe + zo",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "pas op!",
+   "pl": "uważaj!",
+   "ex": "Pas op, dat is zwaar!",
+   "n": "passen = uważać",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "het lukt me niet",
+   "pl": "nie udaje mi się",
+   "ex": "Het lukt me niet om te slapen.",
+   "n": "od lukken",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "ik ben het ermee eens",
+   "pl": "zgadzam się z tym",
+   "ex": "Ik ben het ermee eens.",
+   "n": "er + mee",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "dat schiet op",
+   "pl": "idzie do przodu",
+   "ex": "Zo, dat schiet op!",
+   "n": "od opschieten",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "zeker weten",
+   "pl": "na pewno",
+   "ex": "Zeker weten!",
+   "n": "wzmocnione zeker",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de buurt",
+   "pl": "okolica / dzielnica",
+   "ex": "Ik woon in een leuke buurt.",
+   "n": "buur = sąsiad",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "ophouden",
+   "pl": "przestać",
+   "ex": "Hou op!",
+   "n": "rozkaz: Hou op!",
+   "f": "sep;;ik hou op;;ik hield op;;ik ben opgehouden;;om op te houden"
+  },
+  {
+   "c": "ww",
+   "nl": "wennen aan",
+   "pl": "przyzwyczaić się do",
+   "ex": "Ik moet eraan wennen.",
+   "n": "stały przyimek aan → eraan",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "tevreden",
+   "pl": "zadowolony",
+   "ex": "Ik ben tevreden met mijn werk.",
+   "n": "tevreden MET iets",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "gelukkig",
+   "pl": "na szczęście",
+   "ex": "Gelukkig was hij thuis.",
+   "n": "geluk = szczęście",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "aannemen",
+   "pl": "przyjąć / założyć",
+   "ex": "Ik neem aan dat het klopt.",
+   "n": "dwa znaczenia",
+   "f": "sep;;ik neem aan;;ik nam aan;;ik heb aangenomen;;om aan te nemen"
+  },
+  {
+   "c": "ww",
+   "nl": "uitzoeken",
+   "pl": "wyszukać / wyjaśnić",
+   "ex": "Ik zoek het uit.",
+   "n": "uit + zoeken",
+   "f": "sep;;ik zoek het uit;;ik zocht het uit;;ik heb het uitgezocht;;om het uit te zoeken"
+  },
+  {
+   "c": "ww",
+   "nl": "doorgeven",
+   "pl": "przekazać dalej",
+   "ex": "Geef het door aan de baas.",
+   "n": "door = dalej",
+   "f": "sep;;ik geef door;;ik gaf door;;ik heb doorgegeven;;om door te geven"
+  },
+  {
+   "c": "ww",
+   "nl": "invullen",
+   "pl": "wypełnić (formularz)",
+   "ex": "Vul het formulier in.",
+   "n": "in + vullen",
+   "f": "sep;;ik vul in;;ik vulde in;;ik heb ingevuld;;om in te vullen"
+  },
+  {
+   "c": "ww",
+   "nl": "ontslaan",
+   "pl": "zwolnić z pracy",
+   "ex": "Hij is ontslagen.",
+   "n": "ont- nierozdzielny",
+   "f": "ins;;ik ontsla;;ik ontsloeg;;ik heb ontslagen;;om te ontslaan"
+  },
+  {
+   "c": "zn",
+   "nl": "het nadeel",
+   "pl": "wada / minus",
+   "ex": "Dat is een nadeel.",
+   "n": "przeciwieństwo: het voordeel",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "nuttig",
+   "pl": "użyteczny",
+   "ex": "Dat was een nuttige tip.",
+   "n": "nut = pożytek",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "dat hangt ervan af",
+   "pl": "to zależy",
+   "ex": "Hangt ervan af!",
+   "n": "er + van + af",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "opnemen",
+   "pl": "odebrać (telefon) / nagrać",
+   "ex": "Hij neemt niet op.",
+   "n": "dwa znaczenia",
+   "f": "sep;;ik neem op;;ik nam op;;ik heb opgenomen;;om op te nemen"
+  },
+  {
+   "c": "ww",
+   "nl": "terugbellen",
+   "pl": "oddzwonić",
+   "ex": "Ik bel je zo terug.",
+   "n": "terug + bellen",
+   "f": "sep;;ik bel terug;;ik belde terug;;ik heb teruggebeld;;om terug te bellen"
+  },
+  {
+   "c": "ww",
+   "nl": "aanpakken",
+   "pl": "zabrać się do czegoś",
+   "ex": "Hoe pakken we dit aan?",
+   "n": "pak het aan!",
+   "f": "sep;;ik pak aan;;ik pakte aan;;ik heb aangepakt;;om aan te pakken"
+  },
+  {
+   "c": "ww",
+   "nl": "opletten",
+   "pl": "uważać / być czujnym",
+   "ex": "Let op je vingers!",
+   "n": "Let op! na tabliczkach",
+   "f": "sep;;ik let op;;ik lette op;;ik heb opgelet;;om op te letten"
+  },
+  {
+   "c": "ww",
+   "nl": "uitstellen",
+   "pl": "odłożyć na później",
+   "ex": "Stel het niet uit.",
+   "n": "uit + stellen",
+   "f": "sep;;ik stel uit;;ik stelde uit;;ik heb uitgesteld;;om uit te stellen"
+  },
+  {
+   "c": "ww",
+   "nl": "afzeggen",
+   "pl": "odwołać (spotkanie)",
+   "ex": "Ik moet de afspraak afzeggen.",
+   "n": "af + zeggen",
+   "f": "sep;;ik zeg af;;ik zei af;;ik heb afgezegd;;om af te zeggen"
+  },
+  {
+   "c": "ww",
+   "nl": "langskomen",
+   "pl": "wpaść / zajrzeć",
+   "ex": "Kom je vanavond langs?",
+   "n": "langs = obok, mimo",
+   "f": "sep;;ik kom langs;;ik kwam langs;;ik ben langsgekomen;;om langs te komen"
+  },
+  {
+   "c": "ww",
+   "nl": "oplossen",
+   "pl": "rozwiązać (problem)",
+   "ex": "We lossen het op.",
+   "n": "de oplossing = rozwiązanie",
+   "f": "sep;;ik los op;;ik loste op;;ik heb opgelost;;om op te lossen"
+  },
+  {
+   "c": "ww",
+   "nl": "vervangen",
+   "pl": "zastąpić / wymienić",
+   "ex": "Ik vervang hem morgen.",
+   "n": "silny, ale ver- nie rozdziela",
+   "f": "ins;;ik vervang;;ik verving;;ik heb vervangen;;om te vervangen"
+  },
+  {
+   "c": "ww",
+   "nl": "verdienen",
+   "pl": "zarabiać / zasługiwać",
+   "ex": "Hij verdient het niet.",
+   "n": "dwa znaczenia naraz",
+   "f": "ins;;ik verdien;;ik verdiende;;ik heb verdiend;;om te verdienen"
+  },
+  {
+   "c": "ww",
+   "nl": "verhuizen",
+   "pl": "przeprowadzać się",
+   "ex": "Ik ben vorig jaar verhuisd.",
+   "n": "ZIJN, bo zmiana miejsca",
+   "f": "ins;;ik verhuis;;ik verhuisde;;ik ben verhuisd;;om te verhuizen"
+  },
+  {
+   "c": "ww",
+   "nl": "herkennen",
+   "pl": "rozpoznać",
+   "ex": "Ik herkende hem meteen.",
+   "n": "her + kennen",
+   "f": "ins;;ik herken;;ik herkende;;ik heb herkend;;om te herkennen"
+  },
+  {
+   "c": "ww",
+   "nl": "snappen",
+   "pl": "kumać / rozumieć",
+   "ex": "Ik snap het niet.",
+   "n": "potoczniejsze niż begrijpen",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "het gesprek",
+   "pl": "rozmowa",
+   "ex": "We hadden een goed gesprek.",
+   "n": "spreken → gesprek",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de vergissing",
+   "pl": "pomyłka",
+   "ex": "Dat was een vergissing.",
+   "n": "zich vergissen = mylić się",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de ervaring",
+   "pl": "doświadczenie",
+   "ex": "Ik heb veel ervaring.",
+   "n": "ervaren = doświadczać",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de reden",
+   "pl": "powód",
+   "ex": "Wat is de reden?",
+   "n": "jak ang. reason",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "het gedoe",
+   "pl": "zamieszanie / ceregiele",
+   "ex": "Wat een gedoe!",
+   "n": "bardzo holenderskie",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "ingewikkeld",
+   "pl": "skomplikowany",
+   "ex": "Het is te ingewikkeld.",
+   "n": "wikkelen = zawijać",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "vermoeiend",
+   "pl": "męczący",
+   "ex": "Een vermoeiende dag.",
+   "n": "moe = zmęczony",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "inderdaad",
+   "pl": "rzeczywiście / faktycznie",
+   "ex": "Inderdaad, je hebt gelijk.",
+   "n": "słychać co chwila",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "blijkbaar",
+   "pl": "najwyraźniej",
+   "ex": "Blijkbaar was hij ziek.",
+   "n": "blijken = okazywać się",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de aangifte",
+   "pl": "zgłoszenie / deklaracja",
+   "ex": "Ik doe aangifte bij de politie.",
+   "n": "aangeven = zgłaszać",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de afdeling",
+   "pl": "dział / oddział",
+   "ex": "Ik werk op een andere afdeling.",
+   "n": "w firmie i w szpitalu",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de arbeidsovereenkomst",
+   "pl": "umowa o pracę",
+   "ex": "Heb je je arbeidsovereenkomst getekend?",
+   "n": "arbeid + overeenkomst",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de werkvergunning",
+   "pl": "pozwolenie na pracę",
+   "ex": "Je hebt een werkvergunning nodig.",
+   "n": "vergunnen = zezwalać",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "de adreswijziging",
+   "pl": "zmiana adresu",
+   "ex": "Ik moet een adreswijziging doorgeven.",
+   "n": "przy przeprowadzce",
+   "f": ""
+  },
+  {
+   "c": "zn",
+   "nl": "het akkoord",
+   "pl": "porozumienie / zgoda",
+   "ex": "We hebben een akkoord.",
+   "n": "Akkoord! = zgoda!",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "aanraden",
+   "pl": "doradzać",
+   "ex": "Dat raad ik je aan.",
+   "n": "raad = rada",
+   "f": "sep;;ik raad aan;;ik raadde aan;;ik heb aangeraden;;om aan te raden"
+  },
+  {
+   "c": "ww",
+   "nl": "aangeven",
+   "pl": "zgłaszać / podawać",
+   "ex": "Kun je het even aangeven?",
+   "n": "dwa znaczenia",
+   "f": "sep;;ik geef aan;;ik gaf aan;;ik heb aangegeven;;om aan te geven"
+  },
+  {
+   "c": "ww",
+   "nl": "afronden",
+   "pl": "zakończyć / zaokrąglić",
+   "ex": "Ik rond het werk af.",
+   "n": "rond = okrągły",
+   "f": "sep;;ik rond af;;ik rondde af;;ik heb afgerond;;om af te ronden"
+  },
+  {
+   "c": "ww",
+   "nl": "afkrijgen",
+   "pl": "zdążyć skończyć",
+   "ex": "Ik krijg het niet af.",
+   "n": "af + krijgen",
+   "f": "sep;;ik krijg het af;;ik kreeg het af;;ik heb het afgekregen;;om het af te krijgen"
+  },
+  {
+   "c": "ww",
+   "nl": "aantreffen",
+   "pl": "zastać / natknąć się",
+   "ex": "Ik trof hem niet aan.",
+   "n": "treffen = trafić",
+   "f": "sep;;ik tref aan;;ik trof aan;;ik heb aangetroffen;;om aan te treffen"
+  },
+  {
+   "c": "ww",
+   "nl": "zich vergissen",
+   "pl": "mylić się",
+   "ex": "Ik heb me vergist.",
+   "n": "zwrotny, jak zich herinneren",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "zich verbazen",
+   "pl": "dziwić się",
+   "ex": "Ik verbaas me erover.",
+   "n": "zwrotny + er",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "zich vervelen",
+   "pl": "nudzić się",
+   "ex": "Ik verveel me.",
+   "n": "stąd vervelend",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "aanstaande",
+   "pl": "nadchodzący / przyszły",
+   "ex": "aanstaande maandag",
+   "n": "aanstaande = w przyszły",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "afgelopen",
+   "pl": "miniony / skończony",
+   "ex": "afgelopen week",
+   "n": "afgelopen ↔ aanstaande",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "arbeidsongeschikt",
+   "pl": "niezdolny do pracy",
+   "ex": "Hij is arbeidsongeschikt.",
+   "n": "urzędowe, warto znać",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "algemeen",
+   "pl": "ogólny",
+   "ex": "in het algemeen",
+   "n": "in het algemeen = ogólnie",
+   "f": ""
+  },
+  {
+   "c": "bn",
+   "nl": "actief",
+   "pl": "aktywny",
+   "ex": "Hij is heel actief.",
+   "n": "jak polskie",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "alvast",
+   "pl": "już teraz / na razie",
+   "ex": "Ga alvast maar.",
+   "n": "al + vast",
+   "f": ""
+  },
+  {
+   "c": "bw",
+   "nl": "allerlei",
+   "pl": "wszelkiego rodzaju",
+   "ex": "allerlei dingen",
+   "n": "aller + lei",
+   "f": ""
+  },
+  {
+   "c": "uitdr",
+   "nl": "in het algemeen",
+   "pl": "ogólnie rzecz biorąc",
+   "ex": "In het algemeen gaat het goed.",
+   "n": "od algemeen",
+   "f": ""
+  },
+  {
+   "c": "ww",
+   "nl": "worden",
+   "pl": "stawać się / zostać",
+   "ex": "Het wordt koud.",
+   "n": "do strony biernej!",
+   "f": "st;;ik word;;werd;;werden;;ben geworden"
+  },
+  {
+   "c": "ww",
+   "nl": "blijken",
+   "pl": "okazywać się",
+   "ex": "Het bleek een fout te zijn.",
+   "n": "blijkbaar = najwyraźniej",
+   "f": "st;;het blijkt;;bleek;;bleken;;is gebleken"
+  },
+  {
+   "c": "ww",
+   "nl": "gebeuren",
+   "pl": "dziać się / zdarzać się",
+   "ex": "Wat is er gebeurd?",
+   "n": "tylko 3. osoba",
+   "f": "zw;;het gebeurt;;gebeurde;;gebeurden;;is gebeurd"
+  },
+  {
+   "c": "ww",
+   "nl": "bestaan",
+   "pl": "istnieć",
+   "ex": "Dat bestaat niet!",
+   "n": "be- blokuje ge-",
+   "f": "st;;het bestaat;;bestond;;bestonden;;heeft bestaan"
+  },
+  {
+   "c": "ww",
+   "nl": "lijken",
+   "pl": "wydawać się / przypominać",
+   "ex": "Hij lijkt moe.",
+   "n": "NIE mylić z blijken",
+   "f": "st;;hij lijkt;;leek;;leken;;heeft geleken"
+  },
+  {
+   "c": "ww",
+   "nl": "liggen",
+   "pl": "leżeć",
+   "ex": "Het ligt op tafel.",
+   "n": "leży samo, bez sprawcy",
+   "f": "st;;het ligt;;lag;;lagen;;heeft gelegen"
+  },
+  {
+   "c": "ww",
+   "nl": "leggen",
+   "pl": "kłaść",
+   "ex": "Ik leg het op tafel.",
+   "n": "JA to kładę",
+   "f": "zw;;ik leg;;legde;;legden;;heb gelegd"
+  },
+  {
+   "c": "ww",
+   "nl": "zitten",
+   "pl": "siedzieć / tkwić",
+   "ex": "De sleutel zit erin.",
+   "n": "tkwi samo",
+   "f": "st;;het zit;;zat;;zaten;;heeft gezeten"
+  },
+  {
+   "c": "ww",
+   "nl": "zetten",
+   "pl": "stawiać",
+   "ex": "Ik zet de doos daar.",
+   "n": "JA to stawiam",
+   "f": "zw;;ik zet;;zette;;zetten;;heb gezet"
+  },
+  {
+   "c": "ww",
+   "nl": "stellen",
+   "pl": "umieszczać / stawiać (pytanie)",
+   "ex": "Ik stel een vraag.",
+   "n": "staan → stellen",
+   "f": "zw;;ik stel;;stelde;;stelden;;heb gesteld"
+  },
+  {
+   "c": "ww",
+   "nl": "houden",
+   "pl": "trzymać",
+   "ex": "Hou dit even vast.",
+   "n": "też: houden van",
+   "f": "st;;ik houd;;hield;;hielden;;heb gehouden"
+  },
+  {
+   "c": "ww",
+   "nl": "trekken",
+   "pl": "ciągnąć",
+   "ex": "Trek aan het touw.",
+   "n": "przeciwieństwo: duwen",
+   "f": "st;;ik trek;;trok;;trokken;;heb getrokken"
+  },
+  {
+   "c": "ww",
+   "nl": "halen",
+   "pl": "przynieść / zdążyć",
+   "ex": "Ik haal de trein niet.",
+   "n": "dwa znaczenia",
+   "f": "zw;;ik haal;;haalde;;haalden;;heb gehaald"
+  },
+  {
+   "c": "ww",
+   "nl": "kosten",
+   "pl": "kosztować",
+   "ex": "Wat kost het?",
+   "n": "kostte przez dwa t",
+   "f": "zw;;het kost;;kostte;;kostten;;heeft gekost"
+  },
+  {
+   "c": "ww",
+   "nl": "stijgen",
+   "pl": "wzrastać",
+   "ex": "De prijzen stijgen.",
+   "n": "ZIJN, ruch w górę",
+   "f": "st;;het stijgt;;steeg;;stegen;;is gestegen"
+  },
+  {
+   "c": "ww",
+   "nl": "ontstaan",
+   "pl": "powstawać",
+   "ex": "Er ontstond een probleem.",
+   "n": "ont- blokuje ge-",
+   "f": "st;;het ontstaat;;ontstond;;ontstonden;;is ontstaan"
+  },
+  {
+   "c": "ww",
+   "nl": "betekenen",
+   "pl": "oznaczać",
+   "ex": "Wat betekent dat?",
+   "n": "de betekenis = znaczenie",
+   "f": "zw;;het betekent;;betekende;;betekenden;;heeft betekend"
+  },
+  {
+   "c": "ww",
+   "nl": "voorstellen",
+   "pl": "proponować / przedstawiać",
+   "ex": "Mag ik me voorstellen?",
+   "n": "dwa znaczenia",
+   "f": "sep;;ik stel voor;;ik stelde voor;;ik heb voorgesteld;;om voor te stellen"
+  },
+  {
+   "c": "ww",
+   "nl": "bezoeken",
+   "pl": "odwiedzać",
+   "ex": "Ik bezoek mijn familie.",
+   "n": "be- blokuje ge-",
+   "f": "ins;;ik bezoek;;ik bezocht;;ik heb bezocht;;om te bezoeken"
+  },
+  {
+   "c": "ww",
+   "nl": "heten",
+   "pl": "nazywać się",
+   "ex": "Hoe heet je?",
+   "n": "heette przez dwa t",
+   "f": "zw;;ik heet;;heette;;heetten;;heb geheten"
+  }
+ ]
+}
