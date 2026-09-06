@@ -87,6 +87,10 @@
 
 <input id="search" placeholder="🔍 szukaj po niderlandzku lub polsku…" oninput="render()">
 
+<select id="theme" onchange="render()" style="margin-bottom:0.6rem">
+  <option value="x">📚 Wszystkie tematy</option>
+</select>
+
 <div class="controls">
   <button class="btn on" id="f-all"  onclick="setFilter('all')">Wszystkie</button>
   <button class="btn"    id="f-todo" onclick="setFilter('todo')">Do nauki</button>
@@ -168,6 +172,30 @@ const CATS={ww:{name:'Czasowniki',color:'#5ABF8A'},bn:{name:'Przymiotniki',color
 //  Powłoka nigdy nie dotyka słownika, słownik nigdy nie kasuje postępu.
 // ─────────────────────────────────────────────────────────────
 const PKEY='nl-progress-v1';
+
+const THEMES={basis:'Podstawy z lekcji',tijd:'Czas',familie:'Rodzina',gevoel:'Uczucia',
+  lichaam:'Ciało',zintuig:'Zmysły',dokter:'U lekarza',verzorging:'Pielęgnacja',
+  tandarts:'U dentysty',badkamer:'Łazienka',baby:'Macierzyństwo',kleding:'Ubrania',
+  huis:'Dom',meubels:'Meble',schoonmaak:'Sprzątanie',keuken:'Kuchnia',eten:'Jedzenie',
+  zuivel:'Nabiał i jajka',vlees:'Mięso',fruit:'Owoce',groente:'Warzywa',
+  klussen:'Majsterkowanie',tuin:'Ogród',auto:'Samochód',
+  getallen:'Liczby',wiskunde:'Matematyka',maten:'Miary',school:'Szkoła',
+  kleuren:'Kolory',weer:'Pogoda',hotel:'Hotel',beroepen:'Zawody',post:'Przesyłki',
+  persoon:'Dane osobowe',geld:'Pieniądze',werk:'Praca',
+  voorzetsel:'Wyrażenia przyimkowe',vastvz:'Czasownik + przyimek',
+  topww:'Najczęstsze czasowniki',bijv:'Najważniejsze przymiotniki'};
+
+function fillThemes(){
+  const sel=document.getElementById('theme');
+  const cnt={};
+  view.forEach(w=>{ const t=w.t||'basis'; cnt[t]=(cnt[t]||0)+1; });
+  Object.keys(THEMES).forEach(t=>{
+    if(!cnt[t]) return;
+    const o=document.createElement('option');
+    o.value=t; o.textContent=`${THEMES[t]} (${cnt[t]})`;
+    sel.appendChild(o);
+  });
+}
 
 let corpus=[];                       // ze словnika
 let prog={known:[],custom:[]};       // z localStorage
@@ -260,10 +288,11 @@ function esc(s){return String(s).replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>
 function render(){
   const box=document.getElementById('lists');
   const q=document.getElementById('search').value.trim().toLowerCase();
+  const th=document.getElementById('theme').value;
   box.innerHTML=''; let left=0;
 
   Object.keys(CATS).forEach(c=>{
-    const words=view.filter(w=>w.c===c);
+    const words=view.filter(w=>w.c===c && (th==='x' || (w.t||'basis')===th));
     if(!words.length) return;
     const todo=words.filter(w=>!w.k).length;
     left+=todo;
@@ -299,9 +328,10 @@ function render(){
     box.appendChild(div);
   });
 
+  const scope=view.filter(w=>th==='x'||(w.t||'basis')===th);
   document.getElementById('left').textContent=left;
-  document.getElementById('known').textContent=view.length-left;
-  document.getElementById('total').textContent=view.length;
+  document.getElementById('known').textContent=scope.length-left;
+  document.getElementById('total').textContent=scope.length;
 }
 
 function toggle(nl){
@@ -392,6 +422,7 @@ function toast(m){
   loadProgress();
   await loadCorpus();
   build();
+  fillThemes();
   document.getElementById('loading').style.display='none';
   document.getElementById('app').style.display='block';
   render();
