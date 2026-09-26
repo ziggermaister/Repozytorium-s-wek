@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🇳🇱 Ściąga — Wszystkie Czasy</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, system-ui, sans-serif;
+    background: #0a0a0c;
+    color: #edebe6;
+    padding: 1rem;
+    line-height: 1.6;
+    font-size: 15px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 1rem 0 0.3rem;
+    color: #edebe6;
+  }
+  .sub {
+    text-align: center;
+    color: #888;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    font-family: monospace;
+  }
+  .tense-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    margin: 1.5rem 0 0.7rem;
+    font-weight: 700;
+  }
+  .num {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem;
+    color: #000;
+    flex-shrink: 0;
+  }
+  .rule {
+    background: rgba(255,255,255,0.04);
+    border-left: 3px solid;
+    border-radius: 4px;
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.86rem;
+  }
+  .rule p { margin-bottom: 0.25rem; }
+  .rule p:last-child { margin-bottom: 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0.7rem;
+    font-size: 0.8rem;
+    background: #141416;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th {
+    background: #1c1c20;
+    text-align: left;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #888;
+  }
+  td {
+    padding: 0.4rem 0.5rem;
+    border-top: 1px solid #252528;
+  }
+  .mono { font-family: monospace; }
+  .warn {
+    background: rgba(240,192,64,0.1);
+    border-left: 3px solid #F0C040;
+    padding: 0.5rem 0.7rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.83rem;
+    border-radius: 4px;
+  }
+  .example {
+    background: #141416;
+    border-radius: 6px;
+    padding: 0.5rem 0.7rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.83rem;
+  }
+  .example .nl { font-family: monospace; color: var(--c); margin-bottom: 0.1rem; }
+  .example .pl { color: #888; font-size: 0.78rem; }
+  hr { border: none; height: 1px; background: #252528; margin: 2rem 0; }
+  .toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+  }
+  .toc a {
+    font-family: monospace;
+    font-size: 0.65rem;
+    color: #888;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #252528;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+
+<h1>🇳🇱 Wszystkie Czasy — Kompletna Ściąga</h1>
+<div class="sub">OTT · OVT · VTT · Toekomst · VVT</div>
+<div style="text-align:center;margin-bottom:1rem">
+  <a href="index.html" style="font-family:monospace;font-size:0.7rem;color:#E8600A;
+     border:1px solid #E8600A;border-radius:5px;padding:0.3rem 0.7rem;text-decoration:none">
+     ← Trenażer słówek</a>
+</div>
+
+<div class="toc">
+  <a href="#ott">1. Teraźniejszy</a>
+  <a href="#ovt">2. Imperfectum</a>
+  <a href="#vtt">3. Perfectum</a>
+  <a href="#fut">4. Przyszły</a>
+  <a href="#vvt">5. Zaprzeszły</a>
+  <a href="#modal">Modalne</a>
+  <a href="#conj">Spójniki</a>
+  <a href="#constr">Konstrukcje</a>
+  <a href="#verbs">Czasowniki złożone</a>
+  <a href="#preps">Stałe przyimki</a>
+  <a href="#szyk">Szyk zdania</a>
+</div>
+
+<!-- ═══════════ OTT ═══════════ -->
+<div id="ott">
+<div class="tense-header" style="background:rgba(74,143,232,0.15);">
+  <div class="num" style="background:#4A8FE8;">1</div>
+  <span style="color:#4A8FE8;">Tegenwoordige Tijd</span>
+  <span style="color:#888; font-weight:400; font-size:0.85rem;">— teraźniejszy</span>
+</div>
+
+<div class="rule" style="border-color:#4A8FE8;">
+  <p><b>Budowa:</b> stam | stam+<b>t</b> (jij/hij) | stam+<b>en</b> (wij)</p>
+  <p><b>Kiedy:</b> teraz · zawsze · nawyk · fakt · plan bliski</p>
+</div>
+
+<div class="warn">⚠️ jij traci -t po inwersji: <span class="mono">Werk jij?</span> (nie werkt) | hij ZAWSZE ma -t: <span class="mono">Werkt hij?</span></div>
+
+<table>
+<tr><th></th><th>werken</th><th>zijn</th><th>hebben</th><th>kunnen</th></tr>
+<tr><td>ik</td><td class="mono">werk</td><td class="mono">ben</td><td class="mono">heb</td><td class="mono">kan</td></tr>
+<tr><td>jij</td><td class="mono">werkt</td><td class="mono">bent</td><td class="mono">hebt</td><td class="mono">kunt</td></tr>
+<tr><td>hij/zij</td><td class="mono">werkt</td><td class="mono">is</td><td class="mono">heeft</td><td class="mono">kan</td></tr>
+<tr><td>wij</td><td class="mono">werken</td><td class="mono">zijn</td><td class="mono">hebben</td><td class="mono">kunnen</td></tr>
+</table>
+
+<div class="example" style="--c:#4A8FE8">
+  <div class="nl">Ik werk vandaag in Haarlem.</div>
+  <div class="pl">Pracuję dziś w Haarlemie.</div>
+</div>
+<div class="example" style="--c:#4A8FE8">
+  <div class="nl">Vandaag werk ik in Haarlem. (inwersja)</div>
+  <div class="pl">Dziś pracuję w Haarlemie.</div>
+</div>
+<div class="example" style="--c:#4A8FE8">
+  <div class="nl">Ik werk niet. / Ik heb geen tijd.</div>
+  <div class="pl">Nie pracuję. / Nie mam czasu.</div>
+</div>
+</div>
+
+<hr>
+
+<!-- ═══════════ OVT ═══════════ -->
+<div id="ovt">
+<div class="tense-header" style="background:rgba(232,90,74,0.15);">
+  <div class="num" style="background:#E85A4A;">2</div>
+  <span style="color:#E85A4A;">Imperfectum (OVT)</span>
+  <span style="color:#888; font-weight:400; font-size:0.85rem;">— przeszły prosty</span>
+</div>
+
+<div class="rule" style="border-color:#E85A4A;">
+  <p><b>Kiedy:</b> opis stanu · dawny nawyk · narracja</p>
+</div>
+
+<div class="warn">⚠️ <b>zijn, hebben, MODALNE = ZAWSZE imperfectum</b>, nawet w mowie! was, had, kon, moest, wilde, mocht</div>
+
+<div class="rule" style="border-color:#E85A4A; margin-top:1rem;">
+  <p style="font-weight:700; margin-bottom:0.4rem;">PODZIAŁ: dwa typy czasowników — jak angielskie regular/irregular</p>
+  <p><b>Słabe (regularne)</b> = przewidywalna reguła, rządzi nią 't kofschip</p>
+  <p><b>Silne (nieregularne)</b> = zmiana samogłoski w środku, trzeba wkuć na pamięć — jak sing/sang/sung</p>
+</div>
+
+<table>
+<tr><th colspan="4" style="color:#E85A4A">SŁABE (regularne) — reguła 't kofschip</th></tr>
+<tr><th>bezokolicznik</th><th>stam</th><th>kofschip?</th><th>imperfectum</th></tr>
+<tr><td class="mono">werken</td><td class="mono">werk</td><td>k ✓</td><td class="mono" style="color:#E85A4A">werkte/werkten</td></tr>
+<tr><td class="mono">fietsen</td><td class="mono">fiets</td><td>s ✓</td><td class="mono" style="color:#E85A4A">fietste/fietsten</td></tr>
+<tr><td class="mono">stoppen</td><td class="mono">stop</td><td>p ✓</td><td class="mono" style="color:#E85A4A">stopte/stopten</td></tr>
+<tr><td class="mono">wonen</td><td class="mono">woon</td><td>n ✗</td><td class="mono" style="color:#E85A4A">woonde/woonden</td></tr>
+<tr><td class="mono">bellen</td><td class="mono">bel</td><td>l ✗</td><td class="mono" style="color:#E85A4A">belde/belden</td></tr>
+<tr><td class="mono">leven</td><td class="mono">leef</td><td>v! → de</td><td class="mono" style="color:#E85A4A">leefde/leefden</td></tr>
+<tr><td class="mono">reizen</td><td class="mono">reis</td><td>z! → de</td><td class="mono" style="color:#E85A4A">reisde/reisden</td></tr>
+</table>
+
+<div class="warn" style="margin-top:0.5rem;">💡 <b>'t kofschip</b> = t·k·f·s·ch·p — jeśli stam kończy się na jedną z tych liter → <b>-te</b>. Reszta → <b>-de</b>. Ale <b>v i z na końcu stam zawsze → -de</b>, nawet jeśli po zmianie wygląda jak f/s (v→f, z→s)!</div>
+
+<table>
+<tr><th colspan="3" style="color:#E85A4A">SILNE (nieregularne) — na pamięć, jak angielskie irregular verbs</th></tr>
+<tr><th>bezokolicznik</th><th>ik (imperfectum)</th><th>wij (imperfectum)</th></tr>
+<tr><td class="mono">zijn</td><td class="mono" style="color:#E85A4A">was</td><td class="mono" style="color:#E85A4A">waren</td></tr>
+<tr><td class="mono">hebben</td><td class="mono" style="color:#E85A4A">had</td><td class="mono" style="color:#E85A4A">hadden</td></tr>
+<tr><td class="mono">gaan</td><td class="mono" style="color:#E85A4A">ging</td><td class="mono" style="color:#E85A4A">gingen</td></tr>
+<tr><td class="mono">komen</td><td class="mono" style="color:#E85A4A">kwam</td><td class="mono" style="color:#E85A4A">kwamen</td></tr>
+<tr><td class="mono">rijden</td><td class="mono" style="color:#E85A4A">reed</td><td class="mono" style="color:#E85A4A">reden</td></tr>
+<tr><td class="mono">schrijven</td><td class="mono" style="color:#E85A4A">schreef</td><td class="mono" style="color:#E85A4A">schreven</td></tr>
+<tr><td class="mono">blijven</td><td class="mono" style="color:#E85A4A">bleef</td><td class="mono" style="color:#E85A4A">bleven</td></tr>
+<tr><td class="mono">zien</td><td class="mono" style="color:#E85A4A">zag</td><td class="mono" style="color:#E85A4A">zagen</td></tr>
+<tr><td class="mono">kiezen</td><td class="mono" style="color:#E85A4A">koos</td><td class="mono" style="color:#E85A4A">kozen</td></tr>
+<tr><td class="mono">vinden</td><td class="mono" style="color:#E85A4A">vond</td><td class="mono" style="color:#E85A4A">vonden</td></tr>
+<tr><td class="mono">drinken</td><td class="mono" style="color:#E85A4A">dronk</td><td class="mono" style="color:#E85A4A">dronken</td></tr>
+<tr><td class="mono">kunnen</td><td class="mono" style="color:#E85A4A">kon</td><td class="mono" style="color:#E85A4A">konden</td></tr>
+<tr><td class="mono">moeten</td><td class="mono" style="color:#E85A4A">moest</td><td class="mono" style="color:#E85A4A">moesten</td></tr>
+<tr><td class="mono">willen</td><td class="mono" style="color:#E85A4A">wilde/wou</td><td class="mono" style="color:#E85A4A">wilden</td></tr>
+<tr><td class="mono">doen</td><td class="mono" style="color:#E85A4A">deed</td><td class="mono" style="color:#E85A4A">deden</td></tr>
+<tr><td class="mono">eten</td><td class="mono" style="color:#E85A4A">at</td><td class="mono" style="color:#E85A4A">aten</td></tr>
+<tr><td class="mono">kopen</td><td class="mono" style="color:#E85A4A">kocht</td><td class="mono" style="color:#E85A4A">kochten</td></tr>
+<tr><td class="mono">vergeten</td><td class="mono" style="color:#E85A4A">vergat</td><td class="mono" style="color:#E85A4A">vergaten</td></tr>
+<tr><td class="mono">lezen</td><td class="mono" style="color:#E85A4A">las</td><td class="mono" style="color:#E85A4A">lazen</td></tr>
+</table>
+
+<div class="rule" style="border-color:#E85A4A; margin-top:0.5rem;">
+  <p><b>Wzorce samogłosek w silnych (pomagają zapamiętać):</b></p>
+  <p><span class="mono">ij → ee</span>: rijden→reed, schrijven→schreef, blijven→bleef</p>
+  <p><span class="mono">ie → oo</span>: kiezen→koos, bieden→bood</p>
+  <p><span class="mono">i → o</span>: vinden→vond, drinken→dronk, binden→bond</p>
+</div>
+
+<div class="example" style="--c:#E85A4A">
+  <div class="nl">Gisteren werkte ik tot 22 uur.</div>
+  <div class="pl">Wczoraj pracowałem do 22.</div>
+</div>
+<div class="example" style="--c:#E85A4A">
+  <div class="nl">Ik kon niet komen. / Ik wilde niet gaan.</div>
+  <div class="pl">Nie mogłem przyjść. / Nie chciałem iść.</div>
+</div>
+<div class="example" style="--c:#E85A4A">
+  <div class="nl">Ik at (tło) toen hij belde (zdarzenie).</div>
+  <div class="pl">Jadłem kiedy zadzwonił.</div>
+</div>
+</div>
+
+<hr>
+
+<!-- ═══════════ VTT ═══════════ -->
+<div id="vtt">
+<div class="tense-header" style="background:rgba(90,191,138,0.15);">
+  <div class="num" style="background:#5ABF8A;">3</div>
+  <span style="color:#5ABF8A;">Perfectum (VTT)</span>
+  <span style="color:#888; font-weight:400; font-size:0.85rem;">— przeszły dokonany</span>
+</div>
+
+<div class="rule" style="border-color:#5ABF8A;">
+  <p><b>Budowa:</b> heb/ben (odmienione) + voltooid deelwoord</p>
+  <p><b>Kiedy:</b> MOWA o przeszłości · coś się stało · wynik</p>
+</div>
+
+<div class="warn">⚠️ <b>zijn → ZAWSZE ben geweest, NIGDY heb geweest!</b> | zijn (pomocniczy) → ruch (gaan/komen/fietsen) + zmiana stanu</div>
+
+<div class="rule" style="border-color:#5ABF8A; margin-top:1rem;">
+  <p style="font-weight:700; margin-bottom:0.4rem;">DEELWOORD = "trzecia forma", jak angielskie past participle (go→went→gone) czy francuskie participe passé</p>
+  <p><b>Słabe:</b> ge + stam + t/d (ta sama litera co w imperfectum!)</p>
+  <p><b>Silne:</b> ge + zmieniony rdzeń + en</p>
+  <p><b>Wyjątek:</b> czasowniki z be-, ver-, ont-, her-, ge- na początku → BEZ dodatkowego ge-! (vergeten→vergeten, begrijpen→begrepen)</p>
+</div>
+
+<table>
+<tr><th colspan="4" style="color:#5ABF8A">Trzy formy razem (jak infinitive · past · participle)</th></tr>
+<tr><th>1. bezokolicznik</th><th>2. imperfectum (ik)</th><th>3. deelwoord</th><th>pomocniczy</th></tr>
+<tr><td class="mono">zijn</td><td class="mono">was</td><td class="mono" style="color:#5ABF8A">geweest</td><td class="mono">zijn ⚠️</td></tr>
+<tr><td class="mono">gaan</td><td class="mono">ging</td><td class="mono" style="color:#5ABF8A">gegaan</td><td class="mono">zijn</td></tr>
+<tr><td class="mono">komen</td><td class="mono">kwam</td><td class="mono" style="color:#5ABF8A">gekomen</td><td class="mono">zijn</td></tr>
+<tr><td class="mono">blijven</td><td class="mono">bleef</td><td class="mono" style="color:#5ABF8A">gebleven</td><td class="mono">zijn</td></tr>
+<tr><td class="mono">rijden</td><td class="mono">reed</td><td class="mono" style="color:#5ABF8A">gereden</td><td class="mono">zijn</td></tr>
+<tr><td class="mono">werken</td><td class="mono">werkte</td><td class="mono" style="color:#5ABF8A">gewerkt</td><td class="mono">hebben</td></tr>
+<tr><td class="mono">zien</td><td class="mono">zag</td><td class="mono" style="color:#5ABF8A">gezien</td><td class="mono">hebben</td></tr>
+<tr><td class="mono">eten</td><td class="mono">at</td><td class="mono" style="color:#5ABF8A">gegeten</td><td class="mono">hebben</td></tr>
+<tr><td class="mono">doen</td><td class="mono">deed</td><td class="mono" style="color:#5ABF8A">gedaan</td><td class="mono">hebben</td></tr>
+<tr><td class="mono">kopen</td><td class="mono">kocht</td><td class="mono" style="color:#5ABF8A">gekocht</td><td class="mono">hebben</td></tr>
+<tr><td class="mono">vergeten <span style="color:#F0C040">*</span></td><td class="mono">vergat</td><td class="mono" style="color:#5ABF8A">vergeten</td><td class="mono">hebben</td></tr>
+<tr><td class="mono">begrijpen <span style="color:#F0C040">*</span></td><td class="mono">begreep</td><td class="mono" style="color:#5ABF8A">begrepen</td><td class="mono">hebben</td></tr>
+</table>
+<div style="font-size:0.72rem; color:#888; margin-bottom:0.7rem;">* bez ge- na początku (prefiks blokuje)</div>
+
+<div class="example" style="--c:#5ABF8A">
+  <div class="nl">Ik heb vandaag gewerkt.</div>
+  <div class="pl">Pracowałem dziś.</div>
+</div>
+<div class="example" style="--c:#5ABF8A">
+  <div class="nl">Ik ben naar Amsterdam gegaan.</div>
+  <div class="pl">Pojechałem do Amsterdamu.</div>
+</div>
+<div class="example" style="--c:#5ABF8A">
+  <div class="nl">Ik ben gisteren in Amsterdam geweest.</div>
+  <div class="pl">Byłem w Amsterdamie. (ben, NIE heb!)</div>
+</div>
+</div>
+
+<hr>
+
+<!-- ═══════════ FUTURUM ═══════════ -->
+<div id="fut">
+<div class="tense-header" style="background:rgba(240,192,64,0.15);">
+  <div class="num" style="background:#F0C040;">4</div>
+  <span style="color:#F0C040;">Toekomende Tijd</span>
+  <span style="color:#888; font-weight:400; font-size:0.85rem;">— przyszły</span>
+</div>
+
+<div class="rule" style="border-color:#F0C040;">
+  <p><b>gaan</b> + bezokolicznik = plan, zamiar (pewna przyszłość)</p>
+  <p><b>zullen</b> + bezokolicznik = obietnica, oferta, przypuszczenie</p>
+  <p>💡 Holendrzy często: teraźniejszy = przyszłość: <span class="mono">Morgen werk ik thuis.</span></p>
+</div>
+
+<table>
+<tr><th>Sytuacja</th><th>Użyj</th><th>Przykład</th></tr>
+<tr><td style="font-size:0.78rem;color:#888">mam plan</td><td class="mono" style="color:#F0C040">gaan</td><td class="mono" style="font-size:0.75rem">Ik ga vanavond koken.</td></tr>
+<tr><td style="font-size:0.78rem;color:#888">obietnica</td><td class="mono" style="color:#F0C040">zullen</td><td class="mono" style="font-size:0.75rem">Ik zal niet vergeten.</td></tr>
+<tr><td style="font-size:0.78rem;color:#888">oferta</td><td class="mono" style="color:#F0C040">zullen</td><td class="mono" style="font-size:0.75rem">Zal ik helpen?</td></tr>
+<tr><td style="font-size:0.78rem;color:#888">przewidywanie</td><td class="mono" style="color:#F0C040">zullen</td><td class="mono" style="font-size:0.75rem">Het zal regenen.</td></tr>
+<tr><td style="font-size:0.78rem;color:#888">grzeczność</td><td class="mono" style="color:#F0C040">zouden</td><td class="mono" style="font-size:0.75rem">Zou jij dat doen?</td></tr>
+</table>
+
+<div class="example" style="--c:#F0C040">
+  <div class="nl">Morgen ga ik naar Amsterdam.</div>
+  <div class="pl">Jutro jadę do Amsterdamu.</div>
+</div>
+<div class="example" style="--c:#F0C040">
+  <div class="nl">Ik zal je morgen bellen.</div>
+  <div class="pl">Jutro do ciebie zadzwonię.</div>
+</div>
+</div>
+
+<hr>
+
+<!-- ═══════════ VVT ═══════════ -->
+<div id="vvt">
+<div class="tense-header" style="background:rgba(160,122,232,0.15);">
+  <div class="num" style="background:#A07AE8;">5</div>
+  <span style="color:#A07AE8;">Plusquamperfect (VVT)</span>
+  <span style="color:#888; font-weight:400; font-size:0.85rem;">— zaprzeszły</span>
+</div>
+
+<div class="rule" style="border-color:#A07AE8;">
+  <p><b>Budowa:</b> had/hadden + deelwoord (hebben-verbs)</p>
+  <p><b>Budowa:</b> was/waren + deelwoord (zijn-verbs)</p>
+  <p><b>Kiedy:</b> coś było ZANIM coś innego w przeszłości</p>
+  <p>Sygnały: voordat, nadat, al, net, toen al</p>
+</div>
+
+<div class="example" style="--c:#A07AE8">
+  <div class="nl">Hij had gegeten voordat hij ging slapen.</div>
+  <div class="pl">Zjadł zanim poszedł spać.</div>
+</div>
+<div class="example" style="--c:#A07AE8">
+  <div class="nl">Ik was al vertrokken toen hij belde.</div>
+  <div class="pl">Już wyszedłem kiedy zadzwonił.</div>
+</div>
+<div class="example" style="--c:#A07AE8">
+  <div class="nl">Het bleek dat hij iets vergeten had.</div>
+  <div class="pl">Okazało się że coś zapomniał.</div>
+</div>
+
+<div class="rule" style="border-color:#A07AE8; margin-top:1rem;">
+  <p><b>To samo zdanie we wszystkich czasach:</b></p>
+  <p class="mono" style="color:#4A8FE8">Ik fiets naar het werk. (teraz)</p>
+  <p class="mono" style="color:#E85A4A">Vroeger fietste ik naar het werk. (dawniej)</p>
+  <p class="mono" style="color:#5ABF8A">Gisteren ben ik naar het werk gefietst. (wczoraj)</p>
+  <p class="mono" style="color:#F0C040">Morgen ga ik naar het werk fietsen. (jutro)</p>
+  <p class="mono" style="color:#A07AE8">Ik was er al naartoe gefietst toen hij belde. (zaprzeszły)</p>
+</div>
+</div>
+
+<hr>
+
+<!-- ═══════════ MODAL ═══════════ -->
+<div id="modal">
+<div class="tense-header" style="background:rgba(240,192,64,0.15);">
+  <span style="color:#F0C040;">Modalne czasowniki</span>
+</div>
+
+<div class="rule" style="border-color:#F0C040;">
+  <p>Schemat: [podmiot] + [modal] + [reszta] + [bezokolicznik na końcu]</p>
+  <p>⚠️ hoeven = jedyny modal z <b>te</b>: Ik hoef niet te werken.</p>
+</div>
+
+<table>
+<tr><th>Modal</th><th>ik/hij</th><th>wij</th><th>imperfectum</th><th>znaczenie</th></tr>
+<tr><td class="mono" style="color:#F0C040">kunnen</td><td class="mono">kan</td><td class="mono">kunnen</td><td class="mono" style="color:#E85A4A">kon/konden</td><td style="font-size:0.75rem">móc/umieć</td></tr>
+<tr><td class="mono" style="color:#F0C040">moeten</td><td class="mono">moet</td><td class="mono">moeten</td><td class="mono" style="color:#E85A4A">moest/moesten</td><td style="font-size:0.75rem">musieć</td></tr>
+<tr><td class="mono" style="color:#F0C040">mogen</td><td class="mono">mag</td><td class="mono">mogen</td><td class="mono" style="color:#E85A4A">mocht/mochten</td><td style="font-size:0.75rem">wolno</td></tr>
+<tr><td class="mono" style="color:#F0C040">willen</td><td class="mono">wil</td><td class="mono">willen</td><td class="mono" style="color:#E85A4A">wilde(wou)/wilden</td><td style="font-size:0.75rem">chcieć</td></tr>
+<tr><td class="mono" style="color:#F0C040">zullen</td><td class="mono">zal</td><td class="mono">zullen</td><td class="mono" style="color:#E85A4A">zou/zouden</td><td style="font-size:0.75rem">obietnica</td></tr>
+<tr><td class="mono" style="color:#F0C040">hoeven</td><td class="mono">hoeft</td><td class="mono">hoeven</td><td class="mono" style="color:#E85A4A">hoefde/hoefden</td><td style="font-size:0.75rem">nie musieć (+te)</td></tr>
+</table>
+
+<div class="warn">⚠️ <b>ZAWSZE imperfectum w mowie</b>, nigdy "heb kunnen/moeten/willen" — brzmi jak dokument urzędowy</div>
+
+<div class="example" style="--c:#F0C040">
+  <div class="nl">✅ Ik was moe dus kon ik niet komen.</div>
+  <div class="pl">Byłem zmęczony więc nie mogłem przyjść.</div>
+</div>
+<div class="example" style="--c:#888">
+  <div class="nl">❌ Ik ben moe geweest dus heb ik niet kunnen komen.</div>
+  <div class="pl">(nigdy tak w mowie!)</div>
+</div>
+</div>
+
+<hr>
+
+<!-- ═══════════ CONJ ═══════════ -->
+<div id="conj">
+<div class="tense-header" style="background:rgba(232,96,10,0.15);">
+  <span style="color:#E8600A;">Spójniki — dwa typy</span>
+</div>
+
+<div class="rule" style="border-color:#E8600A;">
+  <p><b style="color:#5ABF8A">Współrzędne</b> (want, maar, en, of, dus) = normalny szyk SVO</p>
+  <p><b style="color:#E8600A">Podrzędne</b> (omdat, dat, toen, als, terwijl, voordat, nadat, totdat) = czasownik na <b>KONIEC</b></p>
+</div>
+
+<table>
+<tr><th colspan="2" style="color:#5ABF8A">Współrzędne — normalny szyk</th></tr>
+<tr><td class="mono">want</td><td style="font-size:0.78rem">bo (SVO!)</td></tr>
+<tr><td class="mono">maar</td><td style="font-size:0.78rem">ale</td></tr>
+<tr><td class="mono">en</td><td style="font-size:0.78rem">i</td></tr>
+<tr><td class="mono">dus</td><td style="font-size:0.78rem">więc</td></tr>
+</table>
+
+<div class="warn">⚠️ <b>want vs omdat</b> — oba znaczą "bo/ponieważ" ale RÓŻNY szyk!<br>
+<span class="mono">Ik ga niet, want ik ben moe.</span> (want = normalny szyk)<br>
+<span class="mono">Ik ga niet omdat ik moe ben.</span> (omdat = V na koniec!)</div>
+
+<table>
+<tr><th colspan="2" style="color:#E8600A">Podrzędne — V na koniec</th></tr>
+<tr><td class="mono">omdat</td><td style="font-size:0.78rem">ponieważ</td></tr>
+<tr><td class="mono">dat</td><td style="font-size:0.78rem">że</td></tr>
+<tr><td class="mono">of</td><td style="font-size:0.78rem">czy</td></tr>
+<tr><td class="mono">toen</td><td style="font-size:0.78rem">kiedy (przeszłość)</td></tr>
+<tr><td class="mono">als</td><td style="font-size:0.78rem">kiedy/jeśli</td></tr>
+<tr><td class="mono">terwijl</td><td style="font-size:0.78rem">podczas gdy</td></tr>
+<tr><td class="mono">voordat</td><td style="font-size:0.78rem">zanim</td></tr>
+<tr><td class="mono">nadat</td><td style="font-size:0.78rem">po tym jak</td></tr>
+<tr><td class="mono">totdat</td><td style="font-size:0.78rem">dopóki, aż</td></tr>
+</table>
+
+<div class="warn">⚠️ Zdanie podrzędne na początku → inwersja w zdaniu głównym: <span class="mono">Omdat ik moe was, ging ik slapen.</span></div>
+
+<div class="rule" style="border-color:#A07AE8; margin-top:1rem;">
+  <p><b>Om te + bezokolicznik</b> = cel ("żeby")</p>
+  <p class="mono">Ik bel om te vragen. — Dzwonię żeby zapytać.</p>
+  <p class="mono">Ik ga naar de winkel om brood te kopen.</p>
+</div>
+
+<div class="rule" style="border-color:#F0C040; margin-top:1rem;">
+  <p><b>Modal + bezokolicznik na końcu zdania podrzędnego:</b></p>
+  <p class="mono">...dat ik niet kan komen</p>
+  <p class="mono">...omdat hij moest werken</p>
+</div>
+</div>
+
+<hr>
+
+<!-- ═══════════ CONSTRUCTIONS ═══════════ -->
+<div id="constr">
+<div class="tense-header" style="background:rgba(160,122,232,0.15);">
+  <span style="color:#A07AE8;">Konstrukcje gramatyczne</span>
+</div>
+
+<div class="rule" style="border-color:#A07AE8;">
+  <p style="font-weight:700; margin-bottom:0.3rem;">Aan het + bezokolicznik — TRWANIE (jak angielskie -ing)</p>
+  <p class="mono">zijn (odmienione) + aan het + bezokolicznik</p>
+</div>
+<div class="example" style="--c:#A07AE8">
+  <div class="nl">Wat ben je aan het doen?</div>
+  <div class="pl">Co robisz? (właśnie teraz, w trakcie)</div>
+</div>
+<div class="example" style="--c:#A07AE8">
+  <div class="nl">Ik was aan het eten toen hij belde.</div>
+  <div class="pl">Jadłem (właśnie) kiedy zadzwonił.</div>
+</div>
+<div class="warn">⚠️ Nigdy: <span class="mono">Ik ben eten</span> — zawsze pełna forma: <span class="mono">Ik ben aan het eten</span></div>
+
+<div class="rule" style="border-color:#A07AE8; margin-top:1rem;">
+  <p style="font-weight:700; margin-bottom:0.3rem;">Om te + bezokolicznik — CEL ("żeby")</p>
+  <p class="mono">om + [dopełnienie] + te + bezokolicznik</p>
+</div>
+<div class="example" style="--c:#A07AE8">
+  <div class="nl">Ik bel om te vragen.</div>
+  <div class="pl">Dzwonię żeby zapytać.</div>
+</div>
+<div class="example" style="--c:#A07AE8">
+  <div class="nl">Ik ga naar de winkel om brood te kopen.</div>
+  <div class="pl">Idę do sklepu żeby kupić chleb.</div>
+</div>
+<div class="example" style="--c:#A07AE8">
+  <div class="nl">Het is moeilijk om Nederlands te leren.</div>
+  <div class="pl">Trudno jest nauczyć się niderlandzkiego.</div>
+</div>
+
+<div class="rule" style="border-color:#A07AE8; margin-top:1rem;">
+  <p style="font-weight:700; margin-bottom:0.3rem;">Te + bezokolicznik — bez "om", po pewnych czasownikach</p>
+  <p>proberen, vergeten, beginnen, hopen + te + bezokolicznik</p>
+</div>
+<div class="example" style="--c:#A07AE8">
+  <div class="nl">Ik probeer te slapen.</div>
+  <div class="pl">Próbuję zasnąć.</div>
+</div>
+<div class="example" style="--c:#A07AE8">
+  <div class="nl">Hij vergat te bellen.</div>
+  <div class="pl">Zapomniał zadzwonić.</div>
+</div>
+<div class="example" style="--c:#A07AE8">
+  <div class="nl">Ik begin te begrijpen.</div>
+  <div class="pl">Zaczynam rozumieć.</div>
+</div>
+
+<div class="rule" style="border-color:#A07AE8; margin-top:1rem;">
+  <p style="font-weight:700; margin-bottom:0.3rem;">Bez "te" — modalne + laten</p>
+  <p>kunnen, moeten, willen, mogen, zullen, gaan, laten + bezokolicznik (BEZ te!)</p>
+</div>
+<div class="example" style="--c:#A07AE8">
+  <div class="nl">Ik wil zeggen. / Ik ga werken. / Laat me zien!</div>
+  <div class="pl">Chcę powiedzieć. / Idę pracować. / Pokaż mi!</div>
+</div>
+<div class="example" style="--c:#A07AE8">
+  <div class="nl">Hij liet de auto repareren.</div>
+  <div class="pl">Kazał naprawić samochód. (laten = kazać/pozwolić)</div>
+</div>
+
+<div class="rule" style="border-color:#A07AE8; margin-top:1rem;">
+  <p style="font-weight:700; margin-bottom:0.3rem;">Er + przyimek (eraan, erover, erin...)</p>
+  <p>zastępuje "to/o tym" gdy mówisz o rzeczy (nie osobie)</p>
+</div>
+<div class="example" style="--c:#A07AE8">
+  <div class="nl">Ik denk eraan. / Ik praat erover.</div>
+  <div class="pl">Myślę o tym. / Mówię o tym.</div>
+</div>
+
+<div class="rule" style="border-color:#A07AE8; margin-top:1rem;">
+  <p style="font-weight:700; margin-bottom:0.3rem;">Kierunek: naartoe / erheen / daarheen</p>
+</div>
+<div class="example" style="--c:#A07AE8">
+  <div class="nl">daar = tam (statycznie) | daar naartoe / erheen = w tamtym kierunku</div>
+  <div class="pl">Ik ga daar naartoe. — Idę tam (ruch).</div>
+</div>
+
+<div style="font-size:0.72rem; color:#666; margin-top:1rem; font-family:monospace;">
+  net=właśnie · pas=dopiero co · al=już · nog niet=jeszcze nie · sowieso=i tak · toch=mimo to · rustig aan=spokojnie
+</div>
+</div>
+
+<hr>
+
+<!-- ═══════════ WORD ORDER ═══════════ -->
+<div id="szyk">
+<div class="tense-header" style="background:rgba(232,96,10,0.15);">
+  <span style="color:#E8600A;">Szyk zdania — V2 i miejsce 1</span>
+</div>
+
+<div class="rule" style="border-color:#E8600A;">
+  <p style="font-weight:700; margin-bottom:0.4rem;">JEDNA ZASADA na wszystko: w zdaniu głównym odmieniony czasownik stoi ZAWSZE na drugim miejscu (V2).</p>
+  <p>Miejsce 1 może zająć cokolwiek — i wtedy podmiot ucieka za czasownik.</p>
+</div>
+
+<table>
+<tr><th>Miejsce 1</th><th>V2</th><th>reszta</th></tr>
+<tr><td class="mono" style="color:#4A8FE8">Ik</td><td class="mono">werk</td><td class="mono" style="font-size:0.75rem">vandaag in Haarlem</td></tr>
+<tr><td class="mono" style="color:#4A8FE8">Vandaag</td><td class="mono">werk</td><td class="mono" style="font-size:0.75rem">ik in Haarlem</td></tr>
+<tr><td class="mono" style="color:#4A8FE8">Dat boek</td><td class="mono">heb</td><td class="mono" style="font-size:0.75rem">ik gisteren gekocht</td></tr>
+</table>
+
+<div class="warn">💡 <b>Miejsce 1 to jedno pudełko — ale zmieści się w nim CAŁE zdanie podrzędne, nie tylko jedno słowo.</b></div>
+
+<table>
+<tr><th>Miejsce 1 (cały blok)</th><th>V2</th><th>reszta</th></tr>
+<tr><td class="mono" style="color:#A07AE8;font-size:0.75rem">Omdat ik moe was,</td><td class="mono">ging</td><td class="mono" style="font-size:0.75rem">ik slapen</td></tr>
+<tr><td class="mono" style="color:#A07AE8;font-size:0.75rem">Toen ik kwam,</td><td class="mono">was</td><td class="mono" style="font-size:0.75rem">hij al weggegaan</td></tr>
+<tr><td class="mono" style="color:#A07AE8;font-size:0.75rem">Hoewel het regende,</td><td class="mono">heb</td><td class="mono" style="font-size:0.75rem">ik gefietst</td></tr>
+</table>
+
+<p style="font-size:0.82rem; color:#888; margin-bottom:0.7rem;">Ten sam mechanizm co przy pojedynczym słowie (Vandaag werk ik) — tylko pudełko 1 jest tu długie. Odwróć kolejność i inwersja znika: <span class="mono" style="color:#5ABF8A">Ik heb gefietst, hoewel het regende.</span> (bo teraz <i>ik</i> jest pierwsze)</p>
+
+<div class="rule" style="border-color:#E85A4A; margin-top:0.5rem;">
+  <p style="font-weight:700; margin-bottom:0.3rem;">Dwa rodzaje inwersji, jeden mechanizm</p>
+  <p><b>1. Pytanie bez słówka pytającego</b> → czasownik na sam początek: <span class="mono">Heb je hem ontmoet?</span></p>
+  <p><b>2. Cokolwiek innego niż podmiot na miejscu 1</b> → podmiot za czasownik: <span class="mono">Dat begrijp ik niet.</span></p>
+  <p style="margin-top:0.3rem;">Przeczenie (niet/geen) NIE wywołuje inwersji — stoi sobie na końcu, przed imiesłowem/bezokolicznikiem.</p>
+</div>
+
+<div class="rule" style="border-color:#4A8FE8; margin-top:0.7rem;">
+  <p style="font-weight:700; margin-bottom:0.4rem;">W zdaniu podrzędnym: czasownik na KONIEC, nie na miejsce 2</p>
+  <p>Warunek V2 („odmieniony + na drugim miejscu") nie zachodzi w podrzędnym — tam jest tylko koniec. Dlatego rozdzielne czasowniki sklejają się z powrotem, mimo że są odmienione:</p>
+  <p class="mono" style="color:#5ABF8A">Hij komt morgen terug. — Hij <b>komt</b> terug (rozdzielone, V2)</p>
+  <p class="mono" style="color:#F0C040">...dat hij morgen terugkomt. — ...dat hij <b>terugkomt</b> (sklejone, koniec zdania)</p>
+</div>
+
+<div class="rule" style="border-color:#F0C040; margin-top:0.7rem;">
+  <p style="font-weight:700; margin-bottom:0.4rem;">Kilka czasowników naraz w podrzędnym — kolejność na końcu</p>
+  <p>Dopełnienie (het/dat) idzie PRZED grupę czasowników, sama grupa czasowników zbija się na sam koniec:</p>
+  <p class="mono" style="font-size:0.8rem;color:#F0C040">...dat hij <b>het</b> had gecontroleerd — dopełnienie przed czasownikami</p>
+  <p class="mono" style="font-size:0.8rem;color:#F0C040">...dat hij <b>het</b> gecontroleerd en begrepen heeft — dwa imiesłowy, jeden hulpwerkwoord na końcu</p>
+  <p class="mono" style="font-size:0.8rem;color:#F0C040">Ik ben vergeten de kamer <b>op te ruimen</b> — te wchodzi między prefiks a bezokolicznik</p>
+</div>
+
+<div class="rule" style="border-color:#A07AE8; margin-top:0.7rem;">
+  <p style="font-weight:700; margin-bottom:0.4rem;">vergeten + te — bez „om", i która forma pomocnicza</p>
+  <p><b>vergeten + sama rzecz</b> (zapomniałem CZEGOŚ — klucza, imienia) → zawsze <b>zijn</b>:</p>
+  <p class="mono" style="color:#5ABF8A">Ik <b>ben</b> mijn sleutel vergeten.</p>
+  <p style="margin-top:0.4rem;"><b>vergeten + te + bezokolicznik</b> (zapomniałem coś ZROBIĆ) → standardowo <b>hebben</b>, bez „om":</p>
+  <p class="mono" style="color:#5ABF8A">Ik <b>heb</b> vergeten te bellen. ✅</p>
+  <p class="mono" style="color:#888">Ik heb vergeten <s>om</s> te bellen. — „om" zbędne, unikaj w piśmie</p>
+</div>
+<div class="warn">💡 „om te" wyraża CEL (po co?) — <span class="mono">Ik ga naar de winkel om melk te kopen.</span> Vergeten/proberen/beginnen nie wyrażają celu, więc biorą samo <b>te</b>, bez „om".</div>
+
+</div>
+
+<div style="text-align:center; color:#666; font-size:0.7rem; margin-top:2rem; font-family:monospace;">
+  HAARLEM 🚲 — LEKCJE Z CLAUDEM
+</div>
+
+<hr>
+
+<!-- ═══════════ SEPARABLE VERBS ═══════════ -->
+<div id="verbs">
+<div class="tense-header" style="background:rgba(232,96,10,0.15);">
+  <span style="color:#E8600A;">Czasowniki złożone — pełny system</span>
+</div>
+
+<div class="rule" style="border-color:#E8600A;">
+  <p style="font-weight:700; margin-bottom:0.4rem;">DWA NIEZALEŻNE PODZIAŁY które się nakładają:</p>
+  <p><b>Wymiar 1 — sposób odmiany:</b> regularny (słaby) / nieregularny (silny)</p>
+  <p><b>Wymiar 2 — budowa:</b> prosty / złożony (rozdzielny lub nierozdzielny)</p>
+  <p style="margin-top:0.3rem;">To jak "kolor włosów" i "długość włosów" — niezależne cechy, każda kombinacja możliwa</p>
+</div>
+
+<table>
+<tr><th colspan="4" style="color:#E8600A">4 kombinacje z przykładami</th></tr>
+<tr><th>Typ</th><th>Przykład</th><th>Odmiana</th><th>Perfectum</th></tr>
+<tr><td style="font-size:0.75rem">regularny+rozdzielny</td><td class="mono">opbellen</td><td class="mono" style="font-size:0.75rem">belde op</td><td class="mono" style="font-size:0.75rem">heeft opgebeld</td></tr>
+<tr><td style="font-size:0.75rem">regularny+nierozdz.</td><td class="mono">herhalen</td><td class="mono" style="font-size:0.75rem">herhaalde</td><td class="mono" style="font-size:0.75rem">heeft herhaald</td></tr>
+<tr><td style="font-size:0.75rem">nieregularny+rozdz.</td><td class="mono">uitgaan</td><td class="mono" style="font-size:0.75rem">ging uit</td><td class="mono" style="font-size:0.75rem">is uitgegaan</td></tr>
+<tr><td style="font-size:0.75rem">nieregularny+nierozdz.</td><td class="mono">begrijpen</td><td class="mono" style="font-size:0.75rem">begreep</td><td class="mono" style="font-size:0.75rem">heeft begrepen</td></tr>
+</table>
+
+<div class="rule" style="border-color:#E8600A; margin-top:0.7rem;">
+  <p style="font-weight:700; margin-bottom:0.3rem;">Rozdzielne (scheidbaar) — prefiks się odłącza</p>
+  <p><b>Teraźniejszy/rozkazujący:</b> prefiks na KONIEC zdania</p>
+  <p class="mono">Ik sta op. / Sta op!</p>
+  <p><b>Perfectum:</b> prefiks wraca, ge- wchodzi W ŚRODEK</p>
+  <p class="mono">Ik ben opgestaan. (op-ge-staan)</p>
+  <p><b>Z "te":</b> prefiks + te + reszta razem</p>
+  <p class="mono">Ik probeer op te staan.</p>
+</div>
+
+<div class="rule" style="border-color:#E8600A; margin-top:0.5rem;">
+  <p style="font-weight:700; margin-bottom:0.3rem;">Nierozdzielne (onscheidbaar) — prefiks NIGDY się nie odłącza</p>
+  <p class="mono">Ik begrijp het. / Ik heb begrepen. / Ik probeer te begrijpen.</p>
+  <p style="margin-top:0.3rem;">Brak "ge-" w perfectum! (prefiks blokuje)</p>
+</div>
+
+<table>
+<tr><th colspan="3" style="color:#5ABF8A">Prefiksy ZAWSZE rozdzielne</th></tr>
+<tr><td class="mono">aan-</td><td style="font-size:0.75rem">aandoen (włączyć)</td><td style="font-size:0.7rem;color:#888">Ik doe het licht aan</td></tr>
+<tr><td class="mono">af-</td><td style="font-size:0.75rem">afmaken (skończyć)</td><td style="font-size:0.7rem;color:#888">Ik maak het af</td></tr>
+<tr><td class="mono">op-</td><td style="font-size:0.75rem">opstaan (wstawać)</td><td style="font-size:0.7rem;color:#888">Ik sta op</td></tr>
+<tr><td class="mono">uit-</td><td style="font-size:0.75rem">uitgaan (wychodzić)</td><td style="font-size:0.7rem;color:#888">Ik ga uit</td></tr>
+<tr><td class="mono">mee-</td><td style="font-size:0.75rem">meenemen (zabrać)</td><td style="font-size:0.7rem;color:#888">Ik neem het mee</td></tr>
+<tr><td class="mono">terug-</td><td style="font-size:0.75rem">terugkomen (wracać)</td><td style="font-size:0.7rem;color:#888">Ik kom terug</td></tr>
+</table>
+
+<table>
+<tr><th colspan="3" style="color:#E85A4A">Prefiksy ZAWSZE nierozdzielne</th></tr>
+<tr><td class="mono">be-</td><td style="font-size:0.75rem">begrijpen (rozumieć)</td><td style="font-size:0.7rem;color:#888">Ik begrijp het</td></tr>
+<tr><td class="mono">ver-</td><td style="font-size:0.75rem">vergeten (zapominać)</td><td style="font-size:0.7rem;color:#888">Ik vergeet het</td></tr>
+<tr><td class="mono">ont-</td><td style="font-size:0.75rem">ontmoeten (spotykać)</td><td style="font-size:0.7rem;color:#888">Ik ontmoet hem</td></tr>
+<tr><td class="mono">her-</td><td style="font-size:0.75rem">herhalen (powtarzać)</td><td style="font-size:0.7rem;color:#888">Ik herhaal het</td></tr>
+</table>
+
+<div class="warn">💡 Wzorzec: prefiksy <b>ruchowe/fizyczne</b> (op,af,aan,uit) → rozdzielne. Prefiksy <b>abstrakcyjne</b> (be,ver,ont,her) → nierozdzielne</div>
+
+<div class="rule" style="border-color:#E8600A; margin-top:0.7rem;">
+  <p style="font-weight:700; margin-bottom:0.4rem;">ROZDZIELNY przez wszystkie czasy — opruimen (sprzątać)</p>
+  <p><b>Jedna reguła:</b> prefiks odczepia się TYLKO gdy czasownik jest odmieniony i stoi na 2. miejscu w zdaniu głównym. Wszędzie indziej wraca.</p>
+</div>
+
+<table>
+<tr><th>Czas / forma</th><th>Zdanie</th><th>Prefiks</th></tr>
+<tr><td style="font-size:0.75rem">teraz</td><td class="mono" style="font-size:0.75rem;color:#5ABF8A">Ik ruim de kamer <b>op</b>.</td><td style="font-size:0.7rem;color:#5ABF8A">odczepiony</td></tr>
+<tr><td style="font-size:0.75rem">imperfectum</td><td class="mono" style="font-size:0.75rem;color:#5ABF8A">Ik ruimde de kamer <b>op</b>.</td><td style="font-size:0.7rem;color:#5ABF8A">odczepiony</td></tr>
+<tr><td style="font-size:0.75rem">perfectum</td><td class="mono" style="font-size:0.75rem;color:#F0C040">Ik heb de kamer <b>opgeruimd</b>.</td><td style="font-size:0.7rem;color:#F0C040">ge- w ŚRODKU</td></tr>
+<tr><td style="font-size:0.75rem">zaprzeszły</td><td class="mono" style="font-size:0.75rem;color:#F0C040">Ik had de kamer <b>opgeruimd</b>.</td><td style="font-size:0.7rem;color:#F0C040">ge- w ŚRODKU</td></tr>
+<tr><td style="font-size:0.75rem">przyszły</td><td class="mono" style="font-size:0.75rem;color:#888">Ik ga de kamer <b>opruimen</b>.</td><td style="font-size:0.7rem;color:#888">sklejony</td></tr>
+<tr><td style="font-size:0.75rem">z modalnym</td><td class="mono" style="font-size:0.75rem;color:#888">Ik moet de kamer <b>opruimen</b>.</td><td style="font-size:0.7rem;color:#888">sklejony</td></tr>
+<tr><td style="font-size:0.75rem">om te</td><td class="mono" style="font-size:0.75rem;color:#F0C040">…om de kamer <b>op te ruimen</b>.</td><td style="font-size:0.7rem;color:#F0C040">te w ŚRODKU</td></tr>
+<tr><td style="font-size:0.75rem">po dat / omdat</td><td class="mono" style="font-size:0.75rem;color:#888">…dat ik de kamer <b>opruim</b>.</td><td style="font-size:0.7rem;color:#888">sklejony</td></tr>
+</table>
+
+<div class="warn">💡 Dwa miejsca, gdzie coś wchodzi DO ŚRODKA: <b>op-ge-ruimd</b> (perfectum) i <b>op-te-ruimen</b> (om te). Nigdzie indziej.</div>
+
+<div class="rule" style="border-color:#E85A4A; margin-top:0.7rem;">
+  <p style="font-weight:700; margin-bottom:0.4rem;">NIEROZDZIELNY przez wszystkie czasy — verplaatsen (przenosić)</p>
+  <p>Prosciej: prefiks NIGDY się nie rusza i NIGDY nie ma ge-.</p>
+</div>
+
+<table>
+<tr><th>Czas / forma</th><th>Zdanie</th></tr>
+<tr><td style="font-size:0.75rem">teraz</td><td class="mono" style="font-size:0.75rem;color:#E85A4A">Ik <b>verplaats</b> de doos.</td></tr>
+<tr><td style="font-size:0.75rem">imperfectum</td><td class="mono" style="font-size:0.75rem;color:#E85A4A">Ik <b>verplaatste</b> de doos.</td></tr>
+<tr><td style="font-size:0.75rem">perfectum</td><td class="mono" style="font-size:0.75rem;color:#E85A4A">Ik heb de doos <b>verplaatst</b>.</td></tr>
+<tr><td style="font-size:0.75rem">z modalnym</td><td class="mono" style="font-size:0.75rem;color:#E85A4A">Ik moet de doos <b>verplaatsen</b>.</td></tr>
+<tr><td style="font-size:0.75rem">om te</td><td class="mono" style="font-size:0.75rem;color:#E85A4A">…om de doos <b>te verplaatsen</b>.</td></tr>
+</table>
+
+<div class="warn">⚠️ <b>over-</b> to zdrajca: <span class="mono">overlopen</span> jest ROZDZIELNY (loop over), ale <span class="mono">overwegen, overleven, overnachten</span> są NIEROZDZIELNE. Tego nie da się wydedukować, trzeba zapamiętać.</div>
+  <p><b>Test:</b> czy przyimek fundamentalnie ZMIENIA znaczenie czasownika?</p>
+  <p class="mono" style="color:#5ABF8A">staan (stać) + op → opstaan (WSTAWAĆ)</p>
+  <p style="font-size:0.75rem; color:#888; margin-bottom:0.3rem;">→ zupełnie inne znaczenie = czasownik złożony ROZDZIELNY</p>
+  <p class="mono" style="color:#4A8FE8">genieten (cieszyć się) + van → nadal "cieszyć się"</p>
+  <p style="font-size:0.75rem; color:#888;">→ przyimek tylko wskazuje obiekt = STAŁY PRZYIMEK, nie czasownik złożony</p>
+</div>
+
+<hr>
+
+<!-- ═══════════ FIXED PREPOSITIONS ═══════════ -->
+<div id="preps">
+<div class="tense-header" style="background:rgba(74,143,232,0.15);">
+  <span style="color:#4A8FE8;">Stałe przyimki (vaste voorzetsels)</span>
+</div>
+
+<div class="rule" style="border-color:#4A8FE8;">
+  <p>Niektóre czasowniki ZAWSZE łączą się z konkretnym przyimkiem — trzeba zapamiętać razem, jak angielskie "depend ON", "listen TO"</p>
+</div>
+
+<table>
+<tr><th>Czasownik + przyimek</th><th>Znaczenie</th><th>Przykład</th></tr>
+<tr><td class="mono" style="color:#4A8FE8">denken aan</td><td style="font-size:0.75rem">myśleć o</td><td class="mono" style="font-size:0.72rem">Ik denk aan jou.</td></tr>
+<tr><td class="mono" style="color:#4A8FE8">wachten op</td><td style="font-size:0.75rem">czekać na</td><td class="mono" style="font-size:0.72rem">Ik wacht op de bus.</td></tr>
+<tr><td class="mono" style="color:#4A8FE8">luisteren naar</td><td style="font-size:0.75rem">słuchać (czegoś)</td><td class="mono" style="font-size:0.72rem">Ik luister naar muziek.</td></tr>
+<tr><td class="mono" style="color:#4A8FE8">kijken naar</td><td style="font-size:0.75rem">patrzeć na</td><td class="mono" style="font-size:0.72rem">Ik kijk naar tv.</td></tr>
+<tr><td class="mono" style="color:#4A8FE8">praten over</td><td style="font-size:0.75rem">rozmawiać o</td><td class="mono" style="font-size:0.72rem">We praten over werk.</td></tr>
+<tr><td class="mono" style="color:#4A8FE8">houden van</td><td style="font-size:0.75rem">kochać/lubić</td><td class="mono" style="font-size:0.72rem">Ik houd van koffie.</td></tr>
+<tr><td class="mono" style="color:#4A8FE8">zoeken naar</td><td style="font-size:0.75rem">szukać</td><td class="mono" style="font-size:0.72rem">Ik zoek naar mijn sleutel.</td></tr>
+<tr><td class="mono" style="color:#4A8FE8">vragen naar</td><td style="font-size:0.75rem">pytać o</td><td class="mono" style="font-size:0.72rem">Ik vraag naar de tijd.</td></tr>
+<tr><td class="mono" style="color:#4A8FE8">geloven in</td><td style="font-size:0.75rem">wierzyć w</td><td class="mono" style="font-size:0.72rem">Ik geloof in jou.</td></tr>
+<tr><td class="mono" style="color:#4A8FE8">zorgen voor</td><td style="font-size:0.75rem">dbać o/zajmować się</td><td class="mono" style="font-size:0.72rem">Ik zorg voor de kinderen.</td></tr>
+</table>
+
+<div class="rule" style="border-color:#4A8FE8; margin-top:0.7rem;">
+  <p style="font-weight:700; margin-bottom:0.3rem;">Gdy zastępujesz RZECZ → er + przyimek (sklejone)</p>
+  <p class="mono">denken aan het probleem → er<b>aan</b> denken</p>
+  <p class="mono">wachten op de bus → er<b>op</b> wachten</p>
+  <p class="mono">praten over het werk → er<b>over</b> praten</p>
+</div>
+<div class="warn">⚠️ Gdy chodzi o OSOBĘ → zwykły zaimek, BEZ "er": denken <b>aan haar</b>, wachten <b>op hem</b></div>
+
+<table>
+<tr><th colspan="3" style="color:#4A8FE8">Więcej er-composita (idiomy)</th></tr>
+<tr><td class="mono">ik kom eraan</td><td style="font-size:0.72rem">już idę</td><td style="font-size:0.68rem;color:#888">komen + aan</td></tr>
+<tr><td class="mono">geniet ervan</td><td style="font-size:0.72rem">ciesz się tym</td><td style="font-size:0.68rem;color:#888">genieten van</td></tr>
+<tr><td class="mono">ik hou ervan</td><td style="font-size:0.72rem">lubię to</td><td style="font-size:0.68rem;color:#888">houden van</td></tr>
+<tr><td class="mono">ik ben ertegen</td><td style="font-size:0.72rem">jestem przeciw temu</td><td style="font-size:0.68rem;color:#888">tegen zijn</td></tr>
+<tr><td class="mono">ik doe ermee</td><td style="font-size:0.72rem">robię to razem z tym</td><td style="font-size:0.68rem;color:#888">doen met</td></tr>
+</table>
+
+<div class="warn">💡 <b>uitkomen</b> (rozdzielny, jedno słowo!) = zgadzać się/pasować — NIE mylić z "komen uit". <span class="mono">Het komt niet uit.</span> = To się nie zgadza.</div>
+</div>
+
+<div style="text-align:center; color:#666; font-size:0.7rem; margin-top:2rem; font-family:monospace;">
+  HAARLEM 🚲 — LEKCJE Z CLAUDEM
+</div>
+
+</body>
+</html>
